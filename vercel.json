@@ -1,0 +1,21 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/index.html",                           "destination": "/",                              "permanent": true },
+    { "source": "/cleaning-services-montreal.html",      "destination": "/cleaning-services-montreal",    "permanent": true },
+    { "source": "/deep-cleaning-montreal.html",          "destination": "/deep-cleaning-montreal",        "permanent": true },
+    { "source": "/move-in-out-cleaning-montreal.html",   "destination": "/move-in-out-cleaning-montreal", "permanent": true },
+    { "source": "/airbnb-cleaning-montreal.html",        "destination": "/airbnb-cleaning-montreal",      "permanent": true },
+    { "source": "/post-renovation-cleaning-montreal.html","destination": "/post-renovation-cleaning-montreal","permanent": true },
+    { "source": "/recurring-cleaning-montreal.html",     "destination": "/recurring-cleaning-montreal",   "permanent": true },
+    { "source": "/prix-nettoyage-montreal.html",         "destination": "/prix-nettoyage-montreal",       "permanent": true },
+    { "source": "/ndg-cleaning-services.html",           "destination": "/ndg-cleaning-services",         "permanent": true },
+    { "source": "/plateau-cleaning-services.html",       "destination": "/plateau-cleaning-services",     "permanent": true },
+    { "source": "/westmount-cleaning-services.html",     "destination": "/westmount-cleaning-services",   "permanent": true },
+    { "source": "/laval-cleaning-services.html",         "destination": "/laval-cleaning-services",       "permanent": true },
+    { "source": "/brossard-cleaning-services.html",      "destination": "/brossard-cleaning-services",    "permanent": true },
+    { "source": "/west-island-cleaning-services.html",   "destination": "/west-island-cleaning-services", "permanent": true },
+    { "source": "/quote.html",                           "destination": "/quote",                         "permanent": true }
+  ]
+}
