@@ -13,8 +13,43 @@
       "permanent": true
     },
     {
+      "source": "/about.html",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/book-now.html",
+      "destination": "/book-now",
+      "permanent": true
+    },
+    {
+      "source": "/pricing.html",
+      "destination": "/pricing",
+      "permanent": true
+    },
+    {
+      "source": "/faq.html",
+      "destination": "/faq",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas.html",
+      "destination": "/service-areas",
+      "permanent": true
+    },
+    {
       "source": "/cleaning-services-montreal.html",
       "destination": "/cleaning-services-montreal",
+      "permanent": true
+    },
+    {
+      "source": "/commercial-cleaning-montreal.html",
+      "destination": "/commercial-cleaning-montreal",
+      "permanent": true
+    },
+    {
+      "source": "/office-cleaning-montreal.html",
+      "destination": "/office-cleaning-montreal",
       "permanent": true
     },
     {
@@ -40,6 +75,36 @@
     {
       "source": "/airbnb-cleaning-montreal.html",
       "destination": "/airbnb-cleaning-montreal",
+      "permanent": true
+    },
+    {
+      "source": "/cleaning-services-west-island.html",
+      "destination": "/cleaning-services-west-island",
+      "permanent": true
+    },
+    {
+      "source": "/cleaning-services-south-shore.html",
+      "destination": "/cleaning-services-south-shore",
+      "permanent": true
+    },
+    {
+      "source": "/cleaning-services-laval.html",
+      "destination": "/cleaning-services-laval",
+      "permanent": true
+    },
+    {
+      "source": "/brossard-cleaning-services.html",
+      "destination": "/brossard-cleaning-services",
+      "permanent": true
+    },
+    {
+      "source": "/longueuil-cleaning-services.html",
+      "destination": "/longueuil-cleaning-services",
+      "permanent": true
+    },
+    {
+      "source": "/west-island-cleaning-services.html",
+      "destination": "/west-island-cleaning-services",
       "permanent": true
     },
     {
