@@ -124,11 +124,11 @@
 
 | Page | Title Tag (≤60 chars) | Meta Description (≤155 chars) |
 |---|---|---|
-| `/` | Professional Cleaning Services in Montreal \| Sparkling Stays | Sparkling Stays offers professional home and commercial cleaning in Montreal. Trusted by 500+ clients since 2012. Book online — (514) 519-7765. |
+| `/` | Professional Cleaning Services in Montreal \| Sparkling Stays | Sparkling Stays offers professional home and commercial cleaning in Montreal. Trusted by 500+ clients since 2012. Book online — 438-867-8770. |
 | `/cleaning-services-montreal` | House Cleaning Services Montreal \| Sparkling Stays | Professional house, deep, move-in/out, AirBnb & recurring cleaning in Montreal. Eco-friendly. Insured. 4.9★ rated. Get a free quote today. |
 | `/prix-nettoyage-montreal` | Cleaning Service Prices Montreal — From $120 \| Sparkling Stays | See transparent cleaning prices for Montreal homes. 1-bed from $120, deep cleans from $200. Recurring clients save 15%. Free quote in 1 hour. |
 | `/deep-cleaning-montreal` | Deep Cleaning Service Montreal \| Sparkling Stays | Top-to-bottom deep cleaning in Montreal. Inside appliances, baseboards, fixtures & all hard-to-reach areas. Insured team. Book online today. |
-| `/move-in-out-cleaning-montreal` | Move In / Move Out Cleaning Montreal \| Sparkling Stays | Get your full deposit back with our Montreal move-out cleaning service. Arrives fully equipped. Same-day available. Book online or call (514) 519-7765. |
+| `/move-in-out-cleaning-montreal` | Move In / Move Out Cleaning Montreal \| Sparkling Stays | Get your full deposit back with our Montreal move-out cleaning service. Arrives fully equipped. Same-day available. Book online or call 438-867-8770. |
 | `/airbnb-cleaning-montreal` | AirBnb Cleaning Montreal — Same-Day Available \| Sparkling Stays | Fast, reliable AirBnb turnover cleaning in Montreal. Laundry, restocking & inspection reports included. Same-day availability. Get a free quote. |
 | `/post-renovation-cleaning-montreal` | Post-Renovation Cleaning Montreal \| Sparkling Stays | Remove construction dust, paint residue & debris after your Montreal renovation. Professional team, eco-friendly products. Free quote in 1 hour. |
 | `/recurring-cleaning-montreal` | Recurring Cleaning Montreal — Save 15% \| Sparkling Stays | Weekly, bi-weekly or monthly cleaning in Montreal. Same cleaner every visit. Save up to 15% on recurring bookings. Book your free quote today. |
@@ -220,7 +220,7 @@ Example: `/ndg-cleaning-services` → "deep cleaning in NDG" → `/deep-cleaning
   "provider": {
     "@type": "LocalBusiness",
     "name": "Sparkling Stays",
-    "telephone": "+15145197765",
+    "telephone": "+14388678770",
     "url": "https://sparklingstays.ca"
   },
   "areaServed": { "@type": "City", "name": "Montreal" },
