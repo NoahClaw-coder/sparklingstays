@@ -974,3 +974,262 @@ details summary::-webkit-details-marker { display: none; }
   .site-footer { padding-top: 3.1rem; }
   .cta-strip { padding-bottom: 3.2rem; }
 }
+
+.homepage {
+  background: radial-gradient(circle at top, #fff8ef 0, #fffdf9 32%, #fffdf9 100%);
+  color: #1f1a15;
+}
+
+.homepage .site-header {
+  background: rgba(255, 253, 249, 0.92);
+  border-bottom: 1px solid rgba(220, 200, 177, 0.7);
+  box-shadow: 0 10px 30px rgba(33, 23, 12, 0.05);
+}
+
+.homepage .site-nav a,
+.homepage .mobile-nav a {
+  color: #625a52;
+}
+
+.homepage .site-nav a:hover,
+.homepage .mobile-nav a:hover,
+.homepage .text-link:hover {
+  color: #925a22;
+}
+
+.homepage .site-nav a[aria-current="page"],
+.homepage .mobile-nav a[aria-current="page"] {
+  color: #19140f;
+}
+
+.homepage .btn-primary {
+  background: #b87a39;
+  box-shadow: 0 14px 28px rgba(146, 90, 34, 0.22);
+}
+
+.homepage .btn-primary:hover {
+  box-shadow: 0 18px 34px rgba(146, 90, 34, 0.28);
+}
+
+.homepage .btn-secondary {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: #e8ddd0;
+  color: #19140f;
+  box-shadow: 0 12px 28px rgba(39, 27, 14, 0.07);
+}
+
+.homepage .menu-toggle {
+  border-color: #e8ddd0;
+  color: #19140f;
+  box-shadow: none;
+}
+
+.homepage .eyebrow {
+  color: #925a22;
+}
+
+.homepage .eyebrow::before {
+  background: #d9b58f;
+  box-shadow: 0 0 0 6px rgba(217, 181, 143, 0.18);
+}
+
+.homepage .home-hero {
+  padding: 4.8rem 0 4.2rem;
+  background:
+    linear-gradient(180deg, rgba(246, 236, 224, 0.68), rgba(255, 253, 249, 0)),
+    radial-gradient(circle at top right, rgba(236, 214, 190, 0.34), transparent 22%);
+}
+
+.homepage .home-hero::before {
+  display: none;
+}
+
+.homepage .home-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.homepage .home-hero-copy h1 {
+  max-width: 12ch;
+  margin: 0 0 1rem;
+  color: #19140f;
+  font-size: clamp(2.5rem, 4.6vw, 4.35rem);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+}
+
+.homepage .lead {
+  max-width: 46rem;
+  color: #625a52;
+}
+
+.homepage .home-hero-actions {
+  margin-bottom: 1rem;
+}
+
+.homepage .home-contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.2rem;
+  font-weight: 700;
+}
+
+.homepage .home-contact-row a {
+  color: #925a22;
+}
+
+.homepage .home-hero-panel,
+.homepage .home-service-card,
+.homepage .home-callout,
+.homepage .home-price-grid .price-card,
+.homepage .faq-list details,
+.homepage .home-cta-inner {
+  border: 1px solid #e8ddd0;
+  box-shadow: 0 18px 50px rgba(39, 27, 14, 0.08);
+}
+
+.homepage .home-hero-panel {
+  background: rgba(255, 250, 244, 0.95);
+  border-radius: 26px;
+  padding: 1.4rem;
+}
+
+.homepage .home-logo-card {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eadfce;
+}
+
+.homepage .home-logo-card img {
+  width: 88px;
+  border-radius: 18px;
+}
+
+.homepage .home-logo-card strong,
+.homepage .home-logo-card span {
+  display: block;
+}
+
+.homepage .home-logo-card span {
+  color: #625a52;
+}
+
+.homepage .home-trust-list {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.homepage .home-trust-list li {
+  position: relative;
+  padding: 0.65rem 0 0.65rem 1.4rem;
+  color: #4c443d;
+}
+
+.homepage .home-trust-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.05rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: #b87a39;
+}
+
+.homepage .home-panel-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 1.2rem;
+}
+
+.homepage .text-link {
+  color: #925a22;
+}
+
+.homepage .home-section {
+  padding: 3.7rem 0;
+}
+
+.homepage .section-heading p,
+.homepage .home-why p {
+  color: #625a52;
+}
+
+.homepage .home-service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.homepage .home-service-card {
+  background: rgba(255, 255, 255, 0.94);
+}
+
+.homepage .home-service-card h3,
+.homepage .home-price-grid h3,
+.homepage .home-callout h3 {
+  color: #19140f;
+}
+
+.homepage .home-split {
+  gap: 1.2rem;
+}
+
+.homepage .home-callout {
+  background: #fffaf4;
+}
+
+.homepage .checklist li::marker {
+  color: #b87a39;
+}
+
+.homepage .home-price-grid {
+  gap: 1rem;
+}
+
+.homepage .home-price-grid .price-card {
+  background: rgba(255, 255, 255, 0.94);
+}
+
+.homepage .faq-answer {
+  color: #625a52;
+}
+
+.homepage .home-cta-strip {
+  padding-bottom: 4rem;
+}
+
+.homepage .home-cta-inner {
+  background: linear-gradient(180deg, #f6ece0, #fff5eb);
+}
+
+.homepage .site-footer {
+  background: linear-gradient(180deg, #241c15, #1a140f);
+}
+
+@media (max-width: 980px) {
+  .homepage .home-hero-grid,
+  .homepage .home-service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .homepage .home-hero-copy h1 {
+    max-width: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .homepage .home-hero {
+    padding: 4.2rem 0 3.5rem;
+  }
+
+  .homepage .home-contact-row {
+    display: grid;
+    gap: 0.55rem;
+  }
+}
