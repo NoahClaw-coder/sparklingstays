@@ -981,63 +981,78 @@ details summary::-webkit-details-marker { display: none; }
 }
 
 .homepage .site-header {
-  background: rgba(255, 253, 249, 0.92);
-  border-bottom: 1px solid rgba(220, 200, 177, 0.7);
-  box-shadow: 0 10px 30px rgba(33, 23, 12, 0.05);
+  background: rgba(252, 247, 247, 0.94);
+  border-bottom: 1px solid rgba(208, 190, 176, 0.65);
+  box-shadow: 0 10px 28px rgba(40, 23, 17, 0.05);
 }
 
 .homepage .site-nav a,
-.homepage .mobile-nav a {
-  color: #625a52;
+.homepage .mobile-nav a,
+.homepage .text-link {
+  color: #d16c49;
 }
 
 .homepage .site-nav a:hover,
 .homepage .mobile-nav a:hover,
 .homepage .text-link:hover {
-  color: #925a22;
+  color: #37592f;
 }
 
 .homepage .site-nav a[aria-current="page"],
 .homepage .mobile-nav a[aria-current="page"] {
-  color: #19140f;
+  color: #17120f;
+}
+
+.homepage .btn {
+  border-radius: 10px;
+  min-height: 48px;
+  padding: 0.9rem 1.3rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
 }
 
 .homepage .btn-primary {
-  background: #b87a39;
-  box-shadow: 0 14px 28px rgba(146, 90, 34, 0.22);
+  background: #121212;
+  box-shadow: none;
 }
 
 .homepage .btn-primary:hover {
-  box-shadow: 0 18px 34px rgba(146, 90, 34, 0.28);
+  box-shadow: none;
 }
 
 .homepage .btn-secondary {
-  background: rgba(255, 255, 255, 0.92);
-  border-color: #e8ddd0;
-  color: #19140f;
-  box-shadow: 0 12px 28px rgba(39, 27, 14, 0.07);
+  background: transparent;
+  border: 2px solid #121212;
+  color: #121212;
+  box-shadow: none;
 }
 
 .homepage .menu-toggle {
-  border-color: #e8ddd0;
+  border-color: #eadbd0;
   color: #19140f;
   box-shadow: none;
 }
 
-.homepage .eyebrow {
-  color: #925a22;
+.homepage .eyebrow,
+.homepage .section-kicker {
+  color: #19140f;
+  letter-spacing: 0.2em;
 }
 
-.homepage .eyebrow::before {
-  background: #d9b58f;
-  box-shadow: 0 0 0 6px rgba(217, 181, 143, 0.18);
+.homepage .eyebrow::before,
+.homepage .section-kicker::before {
+  display: none;
+}
+
+.homepage .home-hero,
+.homepage .home-intro,
+.homepage .home-services-showcase {
+  background: #fcf7f7;
 }
 
 .homepage .home-hero {
-  padding: 4.8rem 0 4.2rem;
-  background:
-    linear-gradient(180deg, rgba(246, 236, 224, 0.68), rgba(255, 253, 249, 0)),
-    radial-gradient(circle at top right, rgba(236, 214, 190, 0.34), transparent 22%);
+  padding: 3.4rem 0 2rem;
 }
 
 .homepage .home-hero::before {
@@ -1046,166 +1061,193 @@ details summary::-webkit-details-marker { display: none; }
 
 .homepage .home-hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  grid-template-columns: minmax(0, 1.22fr) minmax(360px, 0.82fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+.homepage .home-hero-media img,
+.homepage .home-service-image img,
+.homepage .home-gallery-strip img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.homepage .home-hero-media {
+  min-height: 690px;
+  overflow: hidden;
+}
+
+.homepage .home-hero-copy {
+  padding-right: 2rem;
+}
+
+.homepage .home-hero-copy h1,
+.homepage .home-intro h2,
+.homepage .home-centered-heading h2,
+.homepage .home-service-copy h2,
+.homepage .home-cta-inner h2 {
+  margin: 0;
+  color: #17120f;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: 1.05;
+}
+
+.homepage .home-hero-copy h1 {
+  margin-bottom: 1.2rem;
+  font-size: clamp(3rem, 5vw, 5rem);
+  max-width: 8ch;
+}
+
+.homepage .lead,
+.homepage .home-intro p,
+.homepage .home-service-copy p,
+.homepage .home-cta-inner p,
+.homepage .home-testimonial-card blockquote {
+  color: #3f342d;
+}
+
+.homepage .home-hero-lines {
+  margin-bottom: 1.5rem;
+}
+
+.homepage .home-hero-lines div {
+  border-top: 1px solid #1e1915;
+  padding: 0.8rem 0;
+}
+
+.homepage .home-hero-lines div:last-child {
+  border-bottom: 1px solid #1e1915;
+}
+
+.homepage .home-hero-lines span {
+  display: inline-block;
+  font-size: 0.88rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.homepage .home-hero-actions,
+.homepage .home-intro-actions {
+  margin-top: 1.6rem;
+}
+
+.homepage .home-intro {
+  padding: 1.5rem 0 4.5rem;
+}
+
+.homepage .home-intro-inner,
+.homepage .home-centered-heading {
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.homepage .home-intro h2,
+.homepage .home-centered-heading h2 {
+  margin-bottom: 1rem;
+  font-size: clamp(2.3rem, 4vw, 3.7rem);
+}
+
+.homepage .home-testimonials {
+  padding: 5rem 0;
+  background: #f1ece4;
+}
+
+.homepage .home-testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
   align-items: center;
 }
 
-.homepage .home-hero-copy h1 {
-  max-width: 12ch;
-  margin: 0 0 1rem;
-  color: #19140f;
-  font-size: clamp(2.5rem, 4.6vw, 4.35rem);
-  line-height: 1.02;
-  letter-spacing: -0.04em;
-}
-
-.homepage .lead {
-  max-width: 46rem;
-  color: #625a52;
-}
-
-.homepage .home-hero-actions {
-  margin-bottom: 1rem;
-}
-
-.homepage .home-contact-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem 1.2rem;
-  font-weight: 700;
-}
-
-.homepage .home-contact-row a {
-  color: #925a22;
-}
-
-.homepage .home-hero-panel,
-.homepage .home-service-card,
-.homepage .home-callout,
-.homepage .home-price-grid .price-card,
-.homepage .faq-list details,
-.homepage .home-cta-inner {
-  border: 1px solid #e8ddd0;
-  box-shadow: 0 18px 50px rgba(39, 27, 14, 0.08);
-}
-
-.homepage .home-hero-panel {
-  background: rgba(255, 250, 244, 0.95);
-  border-radius: 26px;
-  padding: 1.4rem;
-}
-
-.homepage .home-logo-card {
+.homepage .home-testimonial-card {
+  margin: 0;
+  padding: 2rem 1.6rem;
+  border: 1px solid rgba(23, 18, 15, 0.12);
+  background: rgba(255, 255, 255, 0.42);
+  min-height: 220px;
   display: flex;
   align-items: center;
-  gap: 0.9rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #eadfce;
+  justify-content: center;
+  text-align: center;
 }
 
-.homepage .home-logo-card img {
-  width: 88px;
-  border-radius: 18px;
-}
-
-.homepage .home-logo-card strong,
-.homepage .home-logo-card span {
-  display: block;
-}
-
-.homepage .home-logo-card span {
-  color: #625a52;
-}
-
-.homepage .home-trust-list {
-  list-style: none;
-  margin: 1rem 0;
-  padding: 0;
-}
-
-.homepage .home-trust-list li {
-  position: relative;
-  padding: 0.65rem 0 0.65rem 1.4rem;
-  color: #4c443d;
-}
-
-.homepage .home-trust-list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 1.05rem;
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 999px;
-  background: #b87a39;
-}
-
-.homepage .home-panel-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.9rem 1.2rem;
-}
-
-.homepage .text-link {
-  color: #925a22;
-}
-
-.homepage .home-section {
-  padding: 3.7rem 0;
-}
-
-.homepage .section-heading p,
-.homepage .home-why p {
-  color: #625a52;
-}
-
-.homepage .home-service-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.homepage .home-service-card {
-  background: rgba(255, 255, 255, 0.94);
-}
-
-.homepage .home-service-card h3,
-.homepage .home-price-grid h3,
-.homepage .home-callout h3 {
-  color: #19140f;
-}
-
-.homepage .home-split {
-  gap: 1.2rem;
-}
-
-.homepage .home-callout {
+.homepage .home-testimonial-card-featured {
   background: #fffaf4;
+  min-height: 290px;
 }
 
-.homepage .checklist li::marker {
-  color: #b87a39;
+.homepage .home-testimonial-card blockquote {
+  margin: 0;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
 }
 
-.homepage .home-price-grid {
-  gap: 1rem;
+.homepage .home-services-showcase {
+  padding: 5rem 0;
 }
 
-.homepage .home-price-grid .price-card {
-  background: rgba(255, 255, 255, 0.94);
+.homepage .home-service-stack {
+  display: grid;
+  gap: 4rem;
 }
 
-.homepage .faq-answer {
-  color: #625a52;
+.homepage .home-service-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.92fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+.homepage .home-service-feature-reverse .home-service-image {
+  order: 2;
+}
+
+.homepage .home-service-feature-reverse .home-service-copy {
+  order: 1;
+}
+
+.homepage .home-service-image {
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.homepage .home-service-copy h2 {
+  margin-bottom: 1.25rem;
+  font-size: clamp(2rem, 3vw, 3.25rem);
+}
+
+.homepage .home-service-copy p {
+  margin-bottom: 1.25rem;
 }
 
 .homepage .home-cta-strip {
-  padding-bottom: 4rem;
+  padding: 0 0 4rem;
+  background: #fcf7f7;
 }
 
 .homepage .home-cta-inner {
-  background: linear-gradient(180deg, #f6ece0, #fff5eb);
+  background: #fffaf4;
+  border: 1px solid rgba(23, 18, 15, 0.12);
+  box-shadow: none;
+}
+
+.homepage .home-gallery-strip {
+  background: #272019;
+}
+
+.homepage .home-gallery-strip-inner {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.homepage .home-gallery-strip img {
+  min-height: 260px;
 }
 
 .homepage .site-footer {
@@ -1214,22 +1256,43 @@ details summary::-webkit-details-marker { display: none; }
 
 @media (max-width: 980px) {
   .homepage .home-hero-grid,
-  .homepage .home-service-grid {
+  .homepage .home-service-feature,
+  .homepage .home-testimonial-grid {
     grid-template-columns: 1fr;
   }
 
-  .homepage .home-hero-copy h1 {
-    max-width: none;
+  .homepage .home-hero-copy,
+  .homepage .home-service-copy {
+    padding-right: 0;
+  }
+
+  .homepage .home-hero-media,
+  .homepage .home-service-image,
+  .homepage .home-testimonial-card,
+  .homepage .home-testimonial-card-featured {
+    min-height: auto;
+  }
+
+  .homepage .home-service-feature-reverse .home-service-image,
+  .homepage .home-service-feature-reverse .home-service-copy {
+    order: initial;
+  }
+
+  .homepage .home-gallery-strip-inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 720px) {
   .homepage .home-hero {
-    padding: 4.2rem 0 3.5rem;
+    padding: 2rem 0 1rem;
   }
 
-  .homepage .home-contact-row {
-    display: grid;
-    gap: 0.55rem;
+  .homepage .home-hero-copy h1 {
+    max-width: none;
+  }
+
+  .homepage .home-gallery-strip-inner {
+    grid-template-columns: 1fr;
   }
 }
