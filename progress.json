@@ -1,6 +1,6 @@
 {
   "project": "sparkling-stays-revamp",
-  "last_updated": "2026-04-02T15:56:34.144Z",
+  "last_updated": "2026-04-02T16:03:43.961Z",
   "current_phase": 3,
   "total_pages_target": 125,
   "pages_completed": 86,
@@ -270,6 +270,11 @@
       "date": "2026-04-02T15:56:34.145Z",
       "scope": "design-handoff",
       "summary": "Locked redesign direction after user feedback: follow current Sparkling Stays layout first, Clean Panther as secondary inspiration, keep Sparkling Stays color palette, use video/image-led homepage, and avoid the previously rejected generic text-first design. See REDESIGN_HANDOFF.md for recovery context."
+    },
+    {
+      "date": "2026-04-02T16:03:43.961Z",
+      "scope": "homepage-redesign-first-pass",
+      "summary": "Rebuilt homepage around the current Sparkling Stays layout direction with a top utility bar, stronger nav, real local hero video, imported WP media assets, image-led service cards, richer trust/process sections, and a redesigned footer. Also fixed locale rendering by wrapping the app in NextIntlClientProvider."
     }
   ]
 }

@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 import {notFound} from 'next/navigation';
-import {getTranslations, setRequestLocale} from 'next-intl/server';
+import {getMessages, getTranslations, setRequestLocale} from 'next-intl/server';
+import {NextIntlClientProvider} from 'next-intl';
 import {routing} from '@/lib/i18n';
 import {getCanonical, siteConfig} from '@/lib/seo';
 import {Header} from '@/components/ui/Header';
@@ -42,15 +43,16 @@ export default async function LocaleLayout({children, params}: Props) {
 
   setRequestLocale(locale);
   const t = await getTranslations({locale, namespace: 'footer'});
+  const messages = await getMessages();
 
   return (
-    <>
+    <NextIntlClientProvider locale={locale} messages={messages}>
       <LocalBusinessJsonLd locale={locale} />
-      <div className="min-h-screen bg-slate-50 text-slate-900">
+      <div className="min-h-screen bg-[#f6f4ef] text-slate-900">
         <Header locale={locale} />
         <main>{children}</main>
         <Footer locale={locale} tagline={t('tagline')} rights={t('rights')} />
       </div>
-    </>
+    </NextIntlClientProvider>
   );
 }
