@@ -17,3 +17,5 @@
 - Configured `robots.txt`, `llms.txt`, `app/sitemap.ts`, and `next-sitemap.config.js`
 - Added placeholder Phase 1 route scaffolds for home, service, pricing, about, contact, FAQ, and book-now pages
 - Verified production build passes locally with `npm run build`
+- Completed Phase 0 foundation: localized app shell, redirect dataset wiring, llms-full.txt, and placeholder dynamic destinations for redirects
+- Ready to begin Phase 1 core page production from the saved checkpoint in `progress.json`

@@ -1,34 +1,37 @@
 import {notFound} from 'next/navigation';
-import {Breadcrumbs} from '@/components/ui/Breadcrumbs';
+import {setRequestLocale} from 'next-intl/server';
+import services from '@/content/data/services.json';
 import {CTAButton} from '@/components/ui/CTAButton';
-import {JsonLd} from '@/components/seo/JsonLd';
-import {getServices} from '@/lib/content';
-import {siteConfig} from '@/lib/seo';
 
-export default async function ServicePage({params}: {params: Promise<{locale: 'en' | 'fr'; service: string}>}) {
+export default async function ServiceDetailPage({
+  params
+}: {
+  params: Promise<{locale: string; service: string}>;
+}) {
   const {locale, service} = await params;
-  const item = getServices().find((entry) => entry.slug === service);
+  setRequestLocale(locale);
 
-  if (!item) notFound();
+  const match = services.find((item) => item.slug === service);
+
+  if (!match) {
+    notFound();
+  }
 
   return (
-    <div className="space-y-8 py-6">
-      <Breadcrumbs items={[{label: 'Home', href: '/'}, {label: locale === 'fr' ? 'Services' : 'Services', href: '/services/home-cleaning'}, {label: item.name[locale]}]} />
-      <JsonLd
-        data={{
-          '@context': 'https://schema.org',
-          '@type': 'Service',
-          name: item.name[locale],
-          provider: {'@type': 'LocalBusiness', name: siteConfig.name},
-          areaServed: ['Montreal', 'Laval', 'West Island', 'South Shore']
-        }}
-      />
-      <div className="rounded-[2rem] bg-white p-8 shadow-sm">
-        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--gold)]">Sparkling Stays</p>
-        <h1 className="mt-4 text-4xl font-bold text-[var(--navy)]">{item.name[locale]}</h1>
-        <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600">{item.description[locale]}</p>
-        <div className="mt-6"><CTAButton href="/book-now">{locale === 'fr' ? 'Obtenir une soumission' : 'Get a quote'}</CTAButton></div>
+    <section className="mx-auto max-w-4xl px-6 py-16">
+      <p className="text-sm font-semibold uppercase tracking-[0.3em] text-amber-700">Phase 1 queue</p>
+      <h1 className="mt-4 text-4xl font-bold text-slate-950">{match.name[locale as 'en' | 'fr']}</h1>
+      <p className="mt-4 text-lg leading-8 text-slate-700">{match.description[locale as 'en' | 'fr']}</p>
+      <p className="mt-6 text-slate-700">
+        {locale === 'fr'
+          ? 'La route, la structure SEO et le point d’atterrissage sont maintenant prêts. Le contenu complet sera ajouté à la phase 1.'
+          : 'The route, SEO structure, and landing destination are now ready. Full content will be added in Phase 1.'}
+      </p>
+      <div className="mt-8">
+        <CTAButton href="/book-now" locale={locale}>
+          {locale === 'fr' ? 'Réserver' : 'Book now'}
+        </CTAButton>
       </div>
-    </div>
+    </section>
   );
 }

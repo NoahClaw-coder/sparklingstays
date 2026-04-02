@@ -1,24 +1,21 @@
 # Sparkling Stays
 > Professional residential and commercial cleaning services in Montreal, Quebec, Canada.
-> Serving 25+ neighborhoods across Greater Montreal, Laval, and South Shore.
+> Serving Montreal, Laval, the West Island, and the South Shore.
 > Phone: 438-867-8770 | Email: info@sparklingstays.com
-> Book online: https://sparklingstays.com/en/book-now/
+> Book online: https://sparklingstays.com/en/book-now
 
 ## Services
-- Home Cleaning: Weekly, biweekly, monthly residential cleaning
-- Deep Cleaning: Intensive one-time cleaning for homes and offices
-- Commercial Cleaning: Office and business cleaning services
-- Maid Services: Ongoing household cleaning help
-- Airbnb/Short-term Rental Cleaning: Turnover cleaning for hosts
-- Office Cleaning: Professional office and workspace cleaning
-- Window Cleaning: Interior window cleaning services
-- Post-Renovation Cleaning: Construction and renovation cleanup
+- Home Cleaning
+- Deep Cleaning
+- Commercial Cleaning
+- Maid Services
+- Airbnb Cleaning
+- Office Cleaning
+- Window Cleaning
+- Post-Renovation Cleaning
 
 ## Service Areas
-Montreal, Laval, Brossard, Longueuil, Pointe-Claire, Kirkland, Pierrefonds, DDO, Chambly, Saint-Constant, Île-Perrot, West Island, Saint-Laurent, Boucherville, Ville-Marie, Beaconsfield, Baie-d’Urfé, Westmount, Saint-Hubert, Plateau-Mont-Royal, Lachine, Côte-des-Neiges, NDG, Rosemont, LaSalle, Vaudreuil-Dorion
-
-## Pricing
-Residential cleaning starting from competitive rates. Visit https://sparklingstays.com/en/pricing/ for current pricing.
+Montreal, Laval, Brossard, Longueuil, Pointe-Claire, Kirkland, Pierrefonds, Dollard-des-Ormeaux, Chambly, Saint-Constant, Île-Perrot, West Island, Saint-Laurent, Boucherville, Ville-Marie, Beaconsfield, Baie-d'Urfé, Westmount, Saint-Hubert, Plateau-Mont-Royal, Lachine, Côte-des-Neiges, NDG, Rosemont, LaSalle, Vaudreuil-Dorion
 
 ## Bilingual Service
-Fully bilingual team — English and French service available.
+English and French service available.

@@ -1,9 +1,17 @@
-export default async function AboutPage({params}: {params: Promise<{locale: 'en' | 'fr'}>}) {
+import {setRequestLocale} from 'next-intl/server';
+
+export default async function AboutPage({params}: {params: Promise<{locale: string}>}) {
   const {locale} = await params;
+  setRequestLocale(locale);
+
   return (
-    <div className="rounded-[2rem] bg-white p-8 shadow-sm">
-      <h1 className="text-4xl font-bold text-[var(--navy)]">{locale === 'fr' ? 'À propos' : 'About Sparkling Stays'}</h1>
-      <p className="mt-4 text-slate-600">{locale === 'fr' ? 'Page de base prête pour l’histoire de l’entreprise, la confiance et la preuve sociale.' : 'Base page ready for company story, trust-building content, and social proof.'}</p>
-    </div>
+    <section className="mx-auto max-w-4xl px-6 py-16">
+      <h1 className="text-4xl font-bold text-slate-950">{locale === 'fr' ? 'À propos' : 'About us'}</h1>
+      <p className="mt-4 text-lg leading-8 text-slate-700">
+        {locale === 'fr'
+          ? 'Le récit de marque, la preuve sociale et les éléments de confiance seront finalisés en phase 1.'
+          : 'Brand story, proof, and trust elements will be finalized in Phase 1.'}
+      </p>
+    </section>
   );
 }

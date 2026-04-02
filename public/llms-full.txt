@@ -1,0 +1,24 @@
+# Sparkling Stays — Extended AI context
+
+Sparkling Stays is a Montreal cleaning company serving residential and commercial clients across Greater Montreal, Laval, the West Island, and the South Shore.
+
+Primary contact:
+- Phone: 438-867-8770
+- Email: info@sparklingstays.com
+
+Service set:
+- Home Cleaning
+- Deep Cleaning
+- Commercial Cleaning
+- Maid Services
+- Airbnb Cleaning
+- Office Cleaning
+- Window Cleaning
+- Post-Renovation Cleaning
+
+Current site rebuild status:
+- Framework foundation migrated to Next.js 15
+- Bilingual routing configured for English and French
+- Redirect mapping initialized from legacy URLs
+- Technical SEO utility files added in Phase 0
+- Content expansion for service pages, neighborhood pages, and blog posts scheduled in later phases

@@ -1,26 +1,14 @@
-'use client';
-
-import {useState} from 'react';
-
-type FAQItem = {question: string; answer: string};
-
-export function FAQAccordion({items}: {items: FAQItem[]}) {
-  const [open, setOpen] = useState<number | null>(0);
-
+export function FAQAccordion({items}: {items: {question: string; answer: string}[]}) {
   return (
     <div className="space-y-4">
-      {items.map((item, index) => {
-        const isOpen = open === index;
-        return (
-          <div key={item.question} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-            <button className="flex w-full items-center justify-between gap-4 text-left" onClick={() => setOpen(isOpen ? null : index)}>
-              <span className="font-semibold text-[var(--navy)]">{item.question}</span>
-              <span className="text-xl text-[var(--gold)]">{isOpen ? '−' : '+'}</span>
-            </button>
-            {isOpen ? <p className="mt-3 text-sm leading-6 text-slate-600">{item.answer}</p> : null}
-          </div>
-        );
-      })}
+      {items.map((item) => (
+        <details key={item.question} className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+          <summary className="cursor-pointer list-none text-lg font-semibold text-slate-950">
+            {item.question}
+          </summary>
+          <p className="mt-4 text-slate-700">{item.answer}</p>
+        </details>
+      ))}
     </div>
   );
 }

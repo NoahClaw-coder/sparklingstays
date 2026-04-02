@@ -1,30 +1,32 @@
 import {getTranslations} from 'next-intl/server';
 import {Link} from '@/lib/i18n';
 import {siteConfig} from '@/lib/seo';
+import {LocaleSwitcher} from './LocaleSwitcher';
 
 export async function Header({locale}: {locale: string}) {
   const t = await getTranslations({locale, namespace: 'nav'});
 
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4">
-        <Link href="/" className="text-lg font-bold text-[var(--navy)]">
-          Sparkling Stays
-        </Link>
-        <nav className="hidden gap-5 text-sm text-slate-700 md:flex">
-          <Link href="/services/home-cleaning">{t('services')}</Link>
-          <Link href="/areas/west-island">{t('areas')}</Link>
-          <Link href="/pricing">{t('pricing')}</Link>
-          <Link href="/about">{t('about')}</Link>
-          <Link href="/faq">{t('faq')}</Link>
-          <Link href="/contact">{t('contact')}</Link>
-        </nav>
-        <div className="flex items-center gap-4">
-          <a className="hidden text-sm font-medium text-[var(--navy)] md:block" href={siteConfig.phoneHref}>{siteConfig.phone}</a>
-          <Link href="/book-now" className="rounded-full bg-[var(--navy)] px-4 py-2 text-sm font-semibold text-white">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4">
+        <div>
+          <Link href="/" locale={locale} className="text-lg font-bold tracking-tight text-[#1a1a2e]">
+            Sparkling Stays
+          </Link>
+          <div className="text-sm text-slate-600">{siteConfig.phone}</div>
+        </div>
+        <nav className="hidden items-center gap-6 text-sm font-medium text-slate-700 md:flex">
+          <Link href="/services" locale={locale}>{t('services')}</Link>
+          <Link href="/areas" locale={locale}>{t('areas')}</Link>
+          <Link href="/pricing" locale={locale}>{t('pricing')}</Link>
+          <Link href="/about" locale={locale}>{t('about')}</Link>
+          <Link href="/faq" locale={locale}>{t('faq')}</Link>
+          <Link href="/contact" locale={locale}>{t('contact')}</Link>
+          <Link href="/book-now" locale={locale} className="rounded-full bg-[#d4a017] px-4 py-2 text-[#1a1a2e]">
             {t('bookNow')}
           </Link>
-        </div>
+          <LocaleSwitcher locale={locale} />
+        </nav>
       </div>
     </header>
   );

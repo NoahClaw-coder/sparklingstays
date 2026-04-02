@@ -1,9 +1,17 @@
-export default async function BookNowPage({params}: {params: Promise<{locale: 'en' | 'fr'}>}) {
+import {setRequestLocale} from 'next-intl/server';
+
+export default async function BookNowPage({params}: {params: Promise<{locale: string}>}) {
   const {locale} = await params;
+  setRequestLocale(locale);
+
   return (
-    <div className="rounded-[2rem] bg-white p-8 shadow-sm">
-      <h1 className="text-4xl font-bold text-[var(--navy)]">{locale === 'fr' ? 'Réserver un nettoyage' : 'Book a cleaning'}</h1>
-      <p className="mt-4 max-w-2xl text-slate-600">{locale === 'fr' ? 'Page de conversion de base prête pour le futur formulaire ou widget de réservation.' : 'Base conversion page ready for the future booking form or embedded scheduling widget.'}</p>
-    </div>
+    <section className="mx-auto max-w-4xl px-6 py-16">
+      <h1 className="text-4xl font-bold text-slate-950">{locale === 'fr' ? 'Réserver' : 'Book now'}</h1>
+      <p className="mt-4 text-lg leading-8 text-slate-700">
+        {locale === 'fr'
+          ? 'La page de conversion finale sera branchée à l’outil de réservation pendant la phase contenu.'
+          : 'The final conversion page will be connected to the booking flow during the content phase.'}
+      </p>
+    </section>
   );
 }

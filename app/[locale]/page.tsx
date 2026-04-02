@@ -1,58 +1,57 @@
+import {getTranslations, setRequestLocale} from 'next-intl/server';
+import {Link} from '@/lib/i18n';
 import {Hero} from '@/components/sections/Hero';
-import {JsonLd} from '@/components/seo/JsonLd';
-import {FAQAccordion} from '@/components/ui/FAQAccordion';
-import {ServiceCard} from '@/components/ui/ServiceCard';
-import {getServices} from '@/lib/content';
-import {siteConfig} from '@/lib/seo';
+import {ServicesGrid} from '@/components/sections/ServicesGrid';
+import {HowItWorks} from '@/components/sections/HowItWorks';
+import {FinalCTA} from '@/components/sections/FinalCTA';
+import services from '@/content/data/services.json';
 
-const faqs = {
-  en: [
-    {question: 'What areas do you serve?', answer: 'Sparkling Stays serves Montreal, Laval, the West Island, and the South Shore.'},
-    {question: 'Do you offer recurring cleaning?', answer: 'Yes. We handle weekly, biweekly, monthly, and one-time cleaning visits.'},
-    {question: 'Can you clean offices and rentals?', answer: 'Yes. We cover offices, Airbnb turnovers, move-in/move-out work, and post-renovation cleaning.'}
-  ],
-  fr: [
-    {question: 'Quels secteurs desservez-vous?', answer: 'Sparkling Stays dessert Montréal, Laval, l’Ouest-de-l’Île et la Rive-Sud.'},
-    {question: 'Offrez-vous des nettoyages récurrents?', answer: 'Oui. Nous faisons des visites hebdomadaires, aux deux semaines, mensuelles et ponctuelles.'},
-    {question: 'Faites-vous les bureaux et locations?', answer: 'Oui. Nous couvrons les bureaux, les turnovers Airbnb, les déménagements et l’après-rénovation.'}
-  ]
-} as const;
-
-export default async function HomePage({params}: {params: Promise<{locale: 'en' | 'fr'}>}) {
+export default async function HomePage({params}: {params: Promise<{locale: string}>}) {
   const {locale} = await params;
-  const services = getServices();
+  setRequestLocale(locale);
+  const t = await getTranslations({locale});
 
   return (
-    <div className="space-y-16 py-4">
-      <JsonLd
-        data={{
-          '@context': 'https://schema.org',
-          '@type': 'LocalBusiness',
-          name: siteConfig.name,
-          url: siteConfig.url,
-          telephone: '+1-438-867-8770',
-          email: siteConfig.email,
-          address: {
-            '@type': 'PostalAddress',
-            addressLocality: 'Montreal',
-            addressRegion: 'QC',
-            addressCountry: 'CA'
-          },
-          areaServed: ['Montreal', 'Laval', 'Longueuil', 'West Island', 'South Shore']
-        }}
+    <>
+      <Hero
+        locale={locale}
+        eyebrow={t('hero.eyebrow')}
+        title={t('hero.title')}
+        description={t('hero.description')}
+        primaryCta={t('hero.primaryCta')}
+        secondaryCta={t('hero.secondaryCta')}
       />
-      <Hero locale={locale} />
-      <section className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-        {services.map((service) => (
-          <ServiceCard key={service.slug} slug={service.slug} title={service.name[locale]} description={service.description[locale]} />
-        ))}
-      </section>
-      <section className="rounded-[2rem] bg-white p-8 shadow-sm">
-        <h2 className="text-3xl font-bold text-[var(--navy)]">{locale === 'fr' ? 'Questions fréquentes' : 'Frequently asked questions'}</h2>
-        <div className="mt-6">
-          <FAQAccordion items={[...faqs[locale]]} />
+      <ServicesGrid locale={locale} services={services} />
+      <HowItWorks locale={locale} />
+      <section className="mx-auto max-w-6xl px-6 py-16">
+        <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-slate-200">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-amber-700">
+            {locale === 'fr' ? 'Phase 0' : 'Phase 0'}
+          </p>
+          <h2 className="mt-4 text-3xl font-bold text-slate-950">
+            {locale === 'fr'
+              ? 'Fondation du nouveau site bilingue en place'
+              : 'The bilingual rebuild foundation is in place'}
+          </h2>
+          <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-700">
+            {locale === 'fr'
+              ? 'Cette étape met en place la structure Next.js, l’architecture bilingue, les composants réutilisables et les fichiers SEO techniques. Les pages finales seront produites à la phase suivante.'
+              : 'This stage sets up the Next.js architecture, bilingual routing, reusable components, and technical SEO files. Final page copy will be produced in the next phase.'}
+          </p>
+          <div className="mt-8 flex flex-wrap gap-4 text-sm font-medium text-slate-700">
+            <span className="rounded-full bg-slate-100 px-4 py-2">Next.js 15</span>
+            <span className="rounded-full bg-slate-100 px-4 py-2">next-intl</span>
+            <span className="rounded-full bg-slate-100 px-4 py-2">next-sitemap</span>
+            <span className="rounded-full bg-slate-100 px-4 py-2">EN / FR routing</span>
+          </div>
+          <div className="mt-8">
+            <Link href="/pricing" locale={locale} className="inline-flex rounded-full bg-[#1a1a2e] px-6 py-3 font-semibold text-white transition hover:bg-[#23233c]">
+              {locale === 'fr' ? 'Voir la structure du site' : 'See the site structure'}
+            </Link>
+          </div>
         </div>
       </section>
-    </div>
+      <FinalCTA locale={locale} />
+    </>
   );
 }
