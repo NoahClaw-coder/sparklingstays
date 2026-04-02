@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "home-cleaning",
+    "name": {"en": "Home Cleaning", "fr": "Entretien ménager résidentiel"},
+    "description": {"en": "Recurring and one-time home cleaning services across Montreal.", "fr": "Service d'entretien ménager ponctuel ou récurrent partout dans le Grand Montréal."}
+  },
+  {
+    "slug": "deep-cleaning",
+    "name": {"en": "Deep Cleaning", "fr": "Grand ménage"},
+    "description": {"en": "Detailed top-to-bottom cleaning for resets, move-ins, and seasonal refreshes.", "fr": "Nettoyage en profondeur pour les remises à neuf, déménagements et grands ménages saisonniers."}
+  },
+  {
+    "slug": "commercial-cleaning",
+    "name": {"en": "Commercial Cleaning", "fr": "Nettoyage commercial"},
+    "description": {"en": "Dependable cleaning for offices, clinics, and commercial spaces.", "fr": "Entretien fiable pour bureaux, cliniques et espaces commerciaux."}
+  },
+  {
+    "slug": "maid-services",
+    "name": {"en": "Maid Services", "fr": "Services de femme de ménage"},
+    "description": {"en": "Flexible maid services for busy households.", "fr": "Services de femme de ménage flexibles pour les foyers occupés."}
+  },
+  {
+    "slug": "airbnb-cleaning",
+    "name": {"en": "Airbnb Cleaning", "fr": "Nettoyage Airbnb"},
+    "description": {"en": "Fast turnover cleaning for short-term rentals.", "fr": "Service rapide entre les séjours pour locations courte durée."}
+  },
+  {
+    "slug": "office-cleaning",
+    "name": {"en": "Office Cleaning", "fr": "Nettoyage de bureaux"},
+    "description": {"en": "Professional office cleaning for productive teams.", "fr": "Nettoyage professionnel de bureaux pour des équipes productives."}
+  },
+  {
+    "slug": "window-cleaning",
+    "name": {"en": "Window Cleaning", "fr": "Nettoyage de fenêtres"},
+    "description": {"en": "Interior window cleaning for homes and businesses.", "fr": "Nettoyage intérieur des fenêtres pour maisons et commerces."}
+  },
+  {
+    "slug": "post-renovation-cleaning",
+    "name": {"en": "Post-Renovation Cleaning", "fr": "Nettoyage après rénovation"},
+    "description": {"en": "Dust, debris, and detail cleaning after renovations.", "fr": "Élimination de la poussière et nettoyage de détail après travaux."}
+  }
+]

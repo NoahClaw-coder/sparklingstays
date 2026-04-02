@@ -1,0 +1,81 @@
+{
+  "project": "sparkling-stays-revamp",
+  "last_updated": "2026-04-02T02:45:00Z",
+  "current_phase": 0,
+  "total_pages_target": 125,
+  "pages_completed": 0,
+  "pages_validated": 0,
+  "pages_deployed": 0,
+  "phases": {
+    "0_setup": {
+      "status": "in_progress",
+      "tasks": {
+        "nextjs_scaffold": "completed",
+        "component_library": "completed",
+        "i18n_config": "completed",
+        "redirect_map": "not_started",
+        "robots_txt": "completed",
+        "llms_txt": "completed",
+        "sitemap_config": "completed"
+      }
+    },
+    "1_core_pages": {
+      "status": "not_started",
+      "tasks": {
+        "homepage_en": "not_started",
+        "homepage_fr": "not_started",
+        "service_home_cleaning_en": "not_started",
+        "service_home_cleaning_fr": "not_started",
+        "service_deep_cleaning_en": "not_started",
+        "service_deep_cleaning_fr": "not_started",
+        "service_commercial_en": "not_started",
+        "service_commercial_fr": "not_started",
+        "service_maid_en": "not_started",
+        "service_maid_fr": "not_started",
+        "service_airbnb_en": "not_started",
+        "service_airbnb_fr": "not_started",
+        "service_office_en": "not_started",
+        "service_office_fr": "not_started",
+        "service_window_en": "not_started",
+        "service_window_fr": "not_started",
+        "service_post_reno_en": "not_started",
+        "service_post_reno_fr": "not_started",
+        "pricing_residential_en": "not_started",
+        "pricing_residential_fr": "not_started",
+        "pricing_commercial_en": "not_started",
+        "pricing_commercial_fr": "not_started",
+        "book_now_en": "not_started",
+        "book_now_fr": "not_started",
+        "about_en": "not_started",
+        "about_fr": "not_started",
+        "contact_en": "not_started",
+        "contact_fr": "not_started",
+        "faq_en": "not_started",
+        "faq_fr": "not_started"
+      }
+    },
+    "2_neighborhoods": { "status": "not_started", "tasks": {} },
+    "3_blog": { "status": "not_started", "tasks": {} },
+    "4_legal_utility": { "status": "not_started", "tasks": {} },
+    "5_go_live": {
+      "status": "not_started",
+      "tasks": {
+        "dns_switch": "not_started",
+        "redirects_verified": "not_started",
+        "sitemap_submitted_gsc": "not_started",
+        "sitemap_submitted_bing": "not_started",
+        "wordpress_backup": "not_started"
+      }
+    },
+    "6_monitor": { "status": "not_started", "tasks": {} }
+  },
+  "redirects": {
+    "total_mapped": 0,
+    "total_verified": 0
+  },
+  "seo_validation": {
+    "pages_passed": 0,
+    "pages_failed": 0,
+    "issues": []
+  }
+}
