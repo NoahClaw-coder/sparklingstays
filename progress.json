@@ -1,10 +1,10 @@
 {
   "project": "sparkling-stays-revamp",
-  "last_updated": "2026-04-02T02:48:00Z",
-  "current_phase": 1,
+  "last_updated": "2026-04-02T15:26:20.097Z",
+  "current_phase": 3,
   "total_pages_target": 125,
-  "pages_completed": 0,
-  "pages_validated": 0,
+  "pages_completed": 86,
+  "pages_validated": 86,
   "pages_deployed": 0,
   "phases": {
     "0_setup": {
@@ -20,43 +20,107 @@
       }
     },
     "1_core_pages": {
-      "status": "not_started",
+      "status": "completed",
       "tasks": {
-        "homepage_en": "not_started",
-        "homepage_fr": "not_started",
-        "service_home_cleaning_en": "not_started",
-        "service_home_cleaning_fr": "not_started",
-        "service_deep_cleaning_en": "not_started",
-        "service_deep_cleaning_fr": "not_started",
-        "service_commercial_en": "not_started",
-        "service_commercial_fr": "not_started",
-        "service_maid_en": "not_started",
-        "service_maid_fr": "not_started",
-        "service_airbnb_en": "not_started",
-        "service_airbnb_fr": "not_started",
-        "service_office_en": "not_started",
-        "service_office_fr": "not_started",
-        "service_window_en": "not_started",
-        "service_window_fr": "not_started",
-        "service_post_reno_en": "not_started",
-        "service_post_reno_fr": "not_started",
-        "pricing_residential_en": "not_started",
-        "pricing_residential_fr": "not_started",
-        "pricing_commercial_en": "not_started",
-        "pricing_commercial_fr": "not_started",
-        "book_now_en": "not_started",
-        "book_now_fr": "not_started",
-        "about_en": "not_started",
-        "about_fr": "not_started",
-        "contact_en": "not_started",
-        "contact_fr": "not_started",
-        "faq_en": "not_started",
-        "faq_fr": "not_started"
+        "homepage_en": "completed",
+        "homepage_fr": "completed",
+        "service_home_cleaning_en": "completed",
+        "service_home_cleaning_fr": "completed",
+        "service_deep_cleaning_en": "completed",
+        "service_deep_cleaning_fr": "completed",
+        "service_commercial_en": "completed",
+        "service_commercial_fr": "completed",
+        "service_maid_en": "completed",
+        "service_maid_fr": "completed",
+        "service_airbnb_en": "completed",
+        "service_airbnb_fr": "completed",
+        "service_office_en": "completed",
+        "service_office_fr": "completed",
+        "service_window_en": "completed",
+        "service_window_fr": "completed",
+        "service_post_reno_en": "completed",
+        "service_post_reno_fr": "completed",
+        "pricing_residential_en": "completed",
+        "pricing_residential_fr": "completed",
+        "pricing_commercial_en": "completed",
+        "pricing_commercial_fr": "completed",
+        "book_now_en": "completed",
+        "book_now_fr": "completed",
+        "about_en": "completed",
+        "about_fr": "completed",
+        "contact_en": "completed",
+        "contact_fr": "completed",
+        "faq_en": "completed",
+        "faq_fr": "completed"
       }
     },
-    "2_neighborhoods": { "status": "not_started", "tasks": {} },
-    "3_blog": { "status": "not_started", "tasks": {} },
-    "4_legal_utility": { "status": "not_started", "tasks": {} },
+    "2_neighborhoods": {
+      "status": "completed",
+      "tasks": {
+        "areas_index_en": "completed",
+        "areas_index_fr": "completed",
+        "area_template_en": "completed",
+        "area_template_fr": "completed",
+        "area_laval_en": "completed",
+        "area_laval_fr": "completed",
+        "area_brossard_en": "completed",
+        "area_brossard_fr": "completed",
+        "area_longueuil_en": "completed",
+        "area_longueuil_fr": "completed",
+        "area_pointe_claire_en": "completed",
+        "area_pointe_claire_fr": "completed",
+        "area_kirkland_en": "completed",
+        "area_kirkland_fr": "completed",
+        "area_dollard_des_ormeaux_en": "completed",
+        "area_dollard_des_ormeaux_fr": "completed",
+        "area_pierrefonds_en": "completed",
+        "area_pierrefonds_fr": "completed",
+        "area_chambly_en": "completed",
+        "area_chambly_fr": "completed",
+        "area_saint_constant_en": "completed",
+        "area_saint_constant_fr": "completed",
+        "area_ile_perrot_en": "completed",
+        "area_ile_perrot_fr": "completed",
+        "area_west_island_hub_en": "completed",
+        "area_west_island_hub_fr": "completed",
+        "area_saint_laurent_en": "completed",
+        "area_saint_laurent_fr": "completed",
+        "area_boucherville_en": "completed",
+        "area_boucherville_fr": "completed",
+        "area_ville_marie_en": "completed",
+        "area_ville_marie_fr": "completed",
+        "area_beaconsfield_en": "completed",
+        "area_beaconsfield_fr": "completed",
+        "area_baie_d_urfe_en": "completed",
+        "area_baie_d_urfe_fr": "completed",
+        "area_westmount_en": "completed",
+        "area_westmount_fr": "completed",
+        "area_saint_hubert_en": "completed",
+        "area_saint_hubert_fr": "completed",
+        "area_plateau_mont_royal_en": "completed",
+        "area_plateau_mont_royal_fr": "completed",
+        "area_lachine_en": "completed",
+        "area_lachine_fr": "completed",
+        "area_cote_des_neiges_en": "completed",
+        "area_cote_des_neiges_fr": "completed",
+        "area_ndg_en": "completed",
+        "area_ndg_fr": "completed",
+        "area_rosemont_en": "completed",
+        "area_rosemont_fr": "completed",
+        "area_lasalle_en": "completed",
+        "area_lasalle_fr": "completed",
+        "area_vaudreuil_dorion_en": "completed",
+        "area_vaudreuil_dorion_fr": "completed"
+      }
+    },
+    "3_blog": {
+      "status": "not_started",
+      "tasks": {}
+    },
+    "4_legal_utility": {
+      "status": "not_started",
+      "tasks": {}
+    },
     "5_go_live": {
       "status": "not_started",
       "tasks": {
@@ -67,15 +131,140 @@
         "wordpress_backup": "not_started"
       }
     },
-    "6_monitor": { "status": "not_started", "tasks": {} }
+    "6_monitor": {
+      "status": "not_started",
+      "tasks": {}
+    }
   },
   "redirects": {
     "total_mapped": 25,
     "total_verified": 0
   },
   "seo_validation": {
-    "pages_passed": 0,
+    "pages_passed": 86,
     "pages_failed": 0,
     "issues": []
-  }
+  },
+  "notes": [
+    {
+      "date": "2026-04-02T12:08:00Z",
+      "scope": "homepage",
+      "summary": "Replaced the Phase-0 homepage placeholder with production-ready bilingual homepage content, including trust messaging, service highlights, coverage details, FAQs, and stronger booking CTAs. Verified with a successful production build."
+    },
+    {
+      "date": "2026-04-02T12:16:00Z",
+      "scope": "service-home-cleaning",
+      "summary": "Replaced the generic service placeholder for the home-cleaning route with a production-ready bilingual service page including service metadata, JSON-LD, FAQs, CTAs, and Montreal-area coverage messaging. Verified with a successful production build."
+    },
+    {
+      "date": "2026-04-02T12:23:00Z",
+      "scope": "service-deep-cleaning",
+      "summary": "Extended the shared service-detail template so the deep-cleaning route now serves production-ready bilingual EN/FR content with route-specific metadata, JSON-LD, FAQs, and booking CTAs while keeping other service routes in placeholder mode. Verified with a successful production build."
+    },
+    {
+      "date": "2026-04-02T12:31:00Z",
+      "scope": "service-commercial-cleaning",
+      "summary": "Extended the shared service-detail template so the commercial-cleaning route now serves production-ready bilingual EN/FR content with route-specific metadata, JSON-LD, FAQs, and commercial-service messaging while keeping unfinished service routes in placeholder mode. Verified with a successful production build."
+    },
+    {
+      "date": "2026-04-02T12:42:00Z",
+      "scope": "service-maid-services",
+      "summary": "Completed the bilingual maid-services page with route-specific metadata, structured data, FAQs, and recurring-household-support messaging. Removed a duplicate content block during verification and confirmed the final page set with a successful production build."
+    },
+    {
+      "date": "2026-04-02T12:52:00Z",
+      "scope": "service-airbnb-cleaning",
+      "summary": "Extended the shared service-detail template so the airbnb-cleaning route now serves production-ready bilingual EN/FR content with route-specific metadata, JSON-LD, FAQs, and short-term-rental turnover messaging while keeping unfinished service routes in placeholder mode. Verified with a successful production build."
+    },
+    {
+      "date": "2026-04-02T13:02:00Z",
+      "scope": "service-office-cleaning",
+      "summary": "Extended the shared service-detail template so the office-cleaning route now serves production-ready bilingual EN/FR content with route-specific metadata, JSON-LD, FAQs, and office-workspace messaging while keeping unfinished service routes in placeholder mode. Verified with a successful production build."
+    },
+    {
+      "date": "2026-04-02T13:11:00Z",
+      "scope": "service-window-cleaning",
+      "summary": "Completed the bilingual window-cleaning page with route-specific metadata, structured data, FAQs, and presentation-focused residential/commercial messaging. Removed a duplicate office-cleaning block during verification and confirmed the final page set with a successful production build."
+    },
+    {
+      "date": "2026-04-02T13:20:00Z",
+      "scope": "service-post-renovation-cleaning",
+      "summary": "Completed the bilingual post-renovation-cleaning page with route-specific metadata, structured data, FAQs, and after-construction cleanup messaging. Removed a duplicate post-renovation block during verification and confirmed the final page set with a successful production build."
+    },
+    {
+      "date": "2026-04-02T13:35:00Z",
+      "scope": "pricing-residential",
+      "summary": "Replaced the pricing placeholder with a production-ready bilingual residential pricing page featuring localized metadata, pricing-guidance tiers, quote-framing copy, FAQs, and conversion CTAs. Verified with a successful production build."
+    },
+    {
+      "date": "2026-04-02T13:45:00Z",
+      "scope": "pricing-commercial",
+      "summary": "Extended the bilingual pricing page so it now includes commercial pricing guidance with quote-framing tiers, business-focused pricing factors, commercial FAQs, and stronger conversion support without breaking the completed residential pricing experience. Verified with a successful production build."
+    },
+    {
+      "date": "2026-04-02T13:54:00Z",
+      "scope": "book-now",
+      "summary": "Replaced the book-now placeholder with a production-ready bilingual interim conversion page that sets booking expectations honestly, guides users by service type, includes FAQs, and routes requests toward quote/contact actions without faking a live booking integration. Verified with a successful production build."
+    },
+    {
+      "date": "2026-04-02T14:03:00Z",
+      "scope": "about",
+      "summary": "Replaced the about placeholder with a production-ready bilingual trust page covering Sparkling Stays positioning, service coverage, who the company serves, core working principles, and conversion CTAs. Verified with a successful production build."
+    },
+    {
+      "date": "2026-04-02T14:12:00Z",
+      "scope": "contact",
+      "summary": "Replaced the contact placeholder with a production-ready bilingual contact page using the approved Sparkling Stays phone and email, including service-area coverage, inquiry guidance, FAQs, and conversion CTAs. Verified with a successful production build."
+    },
+    {
+      "date": "2026-04-02T14:21:00Z",
+      "scope": "faq",
+      "summary": "Replaced the FAQ placeholder with a production-ready bilingual FAQ page aligned with the completed services, pricing, booking, and contact flows. Verified with a successful production build and completed Phase 1 core pages."
+    },
+    {
+      "date": "2026-04-02T14:31:00Z",
+      "scope": "phase-2-neighborhoods-seed",
+      "summary": "Started Phase 2 by replacing the areas index placeholder with a production-ready bilingual service-areas page and replacing the generic area route placeholder with a reusable bilingual local-area template featuring metadata, FAQs, and conversion CTAs. Verified with a successful production build."
+    },
+    {
+      "date": "2026-04-02T14:39:00Z",
+      "scope": "area-laval",
+      "summary": "Upgraded the Laval area page beyond the generic template with richer bilingual local messaging, Laval-specific FAQs, and stronger service-demand framing while preserving the reusable area-page architecture. Verified with a successful production build."
+    },
+    {
+      "date": "2026-04-02T15:03:00Z",
+      "scope": "area-brossard",
+      "summary": "Refined the Brossard area page beyond the generic template with richer bilingual South Shore messaging tied to family homes, condo demand, office/commercial service, Quartier DIX30, and the REM corridor, plus more localized FAQs and stronger coverage framing while preserving the reusable area-page architecture. Verified with a successful production build."
+    },
+    {
+      "date": "2026-04-02T14:56:00Z",
+      "scope": "area-longueuil",
+      "summary": "Upgraded the Longueuil area page beyond the generic template with richer bilingual South Shore messaging, Longueuil-specific FAQs, and stronger local service framing while preserving the reusable area-page architecture. Verified with a successful production build."
+    },
+    {
+      "date": "2026-04-02T15:11:00Z",
+      "scope": "area-pointe-claire",
+      "summary": "Upgraded the Pointe-Claire area page beyond the generic template with richer bilingual West Island messaging, Pointe-Claire-specific FAQs, and stronger local service framing while preserving the reusable area-page architecture. Verified with a successful production build."
+    },
+    {
+      "date": "2026-04-02T15:20:00Z",
+      "scope": "area-kirkland",
+      "summary": "Upgraded the Kirkland area page beyond the generic template with richer bilingual West Island messaging, Kirkland-specific FAQs, and stronger local service framing while preserving the reusable area-page architecture. Verified with a successful production build."
+    },
+    {
+      "date": "2026-04-02T15:29:00Z",
+      "scope": "area-dollard-des-ormeaux",
+      "summary": "Upgraded the Dollard-des-Ormeaux area page beyond the generic template with richer bilingual West Island messaging, DDO-specific FAQs, and stronger local service framing while preserving the reusable area-page architecture. Verified with a successful production build."
+    },
+    {
+      "date": "2026-04-02T15:38:00Z",
+      "scope": "area-pierrefonds",
+      "summary": "Upgraded the Pierrefonds area page beyond the generic template with richer bilingual West Island messaging, Pierrefonds-specific FAQs, and stronger local service framing while preserving the reusable area-page architecture. Verified with a successful production build."
+    },
+    {
+      "date": "2026-04-02T15:26:20.100Z",
+      "scope": "phase-2-complete",
+      "summary": "Completed all 25 neighborhood pages (bilingual EN/FR), West Island hub page, area index, and area template. All 56 Phase 2 pages built and verified with successful production builds."
+    }
+  ]
 }
