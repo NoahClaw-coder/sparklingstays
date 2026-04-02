@@ -1,22 +1,16 @@
 {
   "nav": {
+    "howItWorks": "How It Works",
     "services": "Services",
-    "areas": "Areas",
-    "pricing": "Pricing",
-    "about": "About",
-    "faq": "FAQ",
-    "contact": "Contact",
-    "bookNow": "Book now"
+    "about": "About Us",
+    "faqs": "FAQs",
+    "contact": "Contact Us",
+    "bookNow": "BOOK NOW"
   },
   "hero": {
-    "eyebrow": "Montreal cleaning services",
-    "title": "Professional home and commercial cleaning across Greater Montreal",
-    "description": "Sparkling Stays delivers reliable, bilingual cleaning services for homes, condos, offices, and rentals across Montreal, Laval, the West Island, and the South Shore.",
-    "primaryCta": "Get a quote",
-    "secondaryCta": "See services"
-  },
-  "footer": {
-    "tagline": "Reliable residential and commercial cleaning in Montreal.",
-    "rights": "All rights reserved."
+    "title": "Professional Cleaners in Montreal",
+    "description": "We provide residential, commercial, and office cleaning services all over Montréal.",
+    "book": "BOOK ONLINE",
+    "call": "CALL US NOW!"
   }
 }

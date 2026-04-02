@@ -10,11 +10,13 @@ Read this first before doing any new homepage or design work.
 ## Locked Design Direction
 
 ### What Bana wants
-- Use the **layout and feel of the current Sparkling Stays site** as the primary reference.
-- It is acceptable to borrow useful layout ideas from **thecleanpanther.ca**.
+- **Port the exact homepage/site design of the current live site `sparklingstays.com`.**
+- Treat the current live Sparkling Stays site as the **direct UI blueprint**, not merely inspiration.
+- It is acceptable to borrow useful ideas from **thecleanpanther.ca** only if needed, but the design target remains Sparkling Stays.
 - **Do not** use the generic text-first layout that was previously built.
 - Keep **Sparkling Stays color tones/palette**.
-- The site should feel like a real local cleaning company website, not an AI-generated template.
+- Do **not** mention “bilingual service” as a selling point by default — in Montreal/Quebec that is assumed.
+- The site should feel like the same Sparkling Stays brand/site, rebuilt on better tech.
 
 ### Explicitly rejected direction
 - Text-heavy generic SaaS-style blocks
@@ -24,13 +26,13 @@ Read this first before doing any new homepage or design work.
 - Reusing the earlier generic homepage structure as the base
 
 ## Homepage Direction (Locked)
-1. Top utility bar with phone / email / socials
-2. Main navigation modeled after current Sparkling Stays site
-3. Hero should be **video/image-led**, not a flat empty block
-4. Real visual hierarchy with review/proof near hero
-5. Image-based service cards
-6. Trust/proof sections with stronger visual rhythm
-7. More real-business feel, less abstract copy layout
+1. Top utility bar matching the live site structure
+2. Small social icons like the live site
+3. Main navigation matching the live site structure/order
+4. Hero should match the live site composition: video background, review strip, headline, subheadline, two CTAs
+5. Services section should follow the live site card/grid rhythm
+6. How-it-works, FAQ, review/trust, and footer should follow the live site structure as closely as practical
+7. Preserve the visual identity of the current Sparkling Stays site rather than redesigning it
 8. Keep Sparkling Stays navy/gold/white palette
 
 ## Visual References
@@ -56,6 +58,7 @@ Read this first before doing any new homepage or design work.
 - Preserve the feel of the current site’s hero media
 - Bana noted that the current site hero includes a **video** and grey background context behind it
 - Do not ship image-less layouts
+- Avoid unnecessary “bilingual” messaging in hero, trust, or service copy unless it is specifically needed for a page
 
 ## Build Priority Order
 1. Rebuild homepage layout first
@@ -71,10 +74,9 @@ Before stopping, update this file and progress.json with:
 - exact next step
 
 ## Current Next Step
-- Redesign homepage to match current Sparkling Stays layout direction
-- Replace generic hero with video/image-led hero
-- Add utility bar + image-based service sections
-- Maintain Sparkling Stays palette
+- Port the Sparkling Stays homepage section-for-section from the live site into Next.js
+- Finish exact layout matching for utility bar, header/nav, hero, services, how-it-works, FAQ, and footer
+- Then propagate the same visual system across internal pages while preserving the SEO/AEO rebuild plan underneath
 
 ## Reminder To Future Self
 If you come back and feel tempted to reuse the generic layout: don’t.

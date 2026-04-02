@@ -1,22 +1,16 @@
 {
   "nav": {
+    "howItWorks": "Comment ça fonctionne",
     "services": "Services",
-    "areas": "Secteurs",
-    "pricing": "Tarifs",
     "about": "À propos",
-    "faq": "FAQ",
+    "faqs": "FAQs",
     "contact": "Contact",
-    "bookNow": "Réserver"
+    "bookNow": "RÉSERVER"
   },
   "hero": {
-    "eyebrow": "Services d'entretien à Montréal",
-    "title": "Entretien résidentiel et commercial partout dans le Grand Montréal",
-    "description": "Sparkling Stays offre un service d'entretien fiable et bilingue pour les maisons, condos, bureaux et locations courte durée à Montréal, Laval, dans l'Ouest-de-l'Île et sur la Rive-Sud.",
-    "primaryCta": "Obtenir une soumission",
-    "secondaryCta": "Voir les services"
-  },
-  "footer": {
-    "tagline": "Entretien résidentiel et commercial fiable à Montréal.",
-    "rights": "Tous droits réservés."
+    "title": "Nettoyeurs professionnels à Montréal",
+    "description": "Nous offrons des services résidentiels, commerciaux et de bureaux partout à Montréal.",
+    "book": "RÉSERVER EN LIGNE",
+    "call": "APPELEZ-NOUS!"
   }
 }
