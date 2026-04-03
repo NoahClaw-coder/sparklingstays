@@ -73,11 +73,6 @@ const config: NextConfig = {
       { source: '/blog', destination: '/en/blog', permanent: true },
       { source: '/blog/', destination: '/en/blog', permanent: true },
 
-      // ===== OLD LOCALE PREFIX REDIRECTS =====
-      { source: '/en', destination: '/en', permanent: true },
-      { source: '/en/', destination: '/en', permanent: true },
-      { source: '/fr', destination: '/fr', permanent: true },
-      { source: '/fr/', destination: '/fr', permanent: true },
     ];
   },
 };
