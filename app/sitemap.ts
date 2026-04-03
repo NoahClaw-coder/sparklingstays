@@ -1,6 +1,7 @@
 import type {MetadataRoute} from 'next';
 import services from '@/content/services.json';
 import neighborhoods from '@/content/neighborhoods.json';
+import blogPosts from '@/content/blog.json';
 
 const BASE = 'https://sparklingstays.com';
 
@@ -24,6 +25,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
     for (const n of neighborhoods) {
       entries.push({url: `${BASE}/${locale}/areas/${n.slug}`, lastModified: now, changeFrequency: 'monthly', priority: 0.6});
+    }
+    // Blog posts
+    for (const post of blogPosts) {
+      entries.push({url: `${BASE}/${locale}/blog/${post.slug}`, lastModified: now, changeFrequency: 'monthly', priority: 0.5});
+    }
+    // Utility pages
+    for (const page of ['/privacy-policy', '/terms', '/blog']) {
+      entries.push({url: `${BASE}/${locale}${page}`, lastModified: now, changeFrequency: 'monthly', priority: 0.3});
     }
   }
 

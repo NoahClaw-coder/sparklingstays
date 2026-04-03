@@ -4,7 +4,7 @@ import {notFound} from 'next/navigation';
 import type {Metadata} from 'next';
 import posts from '@/content/blog.json';
 import services from '@/content/services.json';
-import {makeMeta, breadcrumbSchema, JsonLd} from '@/lib/seo';
+import {makeMeta, breadcrumbSchema, articleSchema, JsonLd} from '@/lib/seo';
 
 type Props = {params: Promise<{locale: 'en' | 'fr'; slug: string}>};
 
@@ -43,7 +43,10 @@ export default async function BlogPost({params}: Props) {
   return (
     <SiteShell locale={locale}>
     <div className="min-h-screen bg-white text-[#1b2434]">
-      <JsonLd data={breadcrumbSchema(crumbs)} />
+      <JsonLd data={[
+        articleSchema(title, slug, locale, '2026-04-01'),
+        breadcrumbSchema(crumbs)
+      ]} />
 
       <section className="bg-[#fbf5e8] py-16">
         <div className="mx-auto max-w-[860px] px-6">

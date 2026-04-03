@@ -60,11 +60,73 @@ export function serviceSchema(name: string, desc: string, slug: string, locale: 
     '@type': 'Service',
     name,
     description: desc,
-    provider: {'@id': `${BASE}/#business`},
+    provider: {
+      '@type': 'LocalBusiness',
+      '@id': `${BASE}/#business`,
+      name: 'Sparkling Stays',
+      telephone: '+1-438-867-8770',
+      url: BASE
+    },
     url: `${BASE}/${locale}/services/${slug}`,
+    areaServed: [
+      {'@type': 'City', name: 'Montreal'},
+      {'@type': 'City', name: 'Laval'},
+      {'@type': 'Place', name: 'West Island'},
+      {'@type': 'Place', name: 'South Shore'}
+    ],
+    serviceType: name
+  };
+}
+
+export function areaServedSchema(areaName: string, slug: string, locale: string, services: string[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    '@id': `${BASE}/#business`,
+    name: 'Sparkling Stays',
+    url: `${BASE}/${locale}/areas/${slug}`,
+    telephone: '+1-438-867-8770',
+    email: 'info@sparklingstays.com',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Montreal',
+      addressRegion: 'QC',
+      addressCountry: 'CA'
+    },
     areaServed: {
       '@type': 'Place',
-      name: 'Greater Montreal, QC, Canada'
+      name: areaName
+    },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: `Cleaning Services in ${areaName}`,
+      itemListElement: services.map(s => ({
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: s
+        }
+      }))
+    }
+  };
+}
+
+export function articleSchema(title: string, slug: string, locale: string, datePublished: string) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    url: `${BASE}/${locale}/blog/${slug}`,
+    datePublished,
+    author: {
+      '@type': 'Organization',
+      name: 'Sparkling Stays',
+      url: BASE
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Sparkling Stays',
+      url: BASE
     }
   };
 }

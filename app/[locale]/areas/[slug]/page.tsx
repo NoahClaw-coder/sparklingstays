@@ -4,7 +4,7 @@ import {notFound} from 'next/navigation';
 import type {Metadata} from 'next';
 import neighborhoods from '@/content/neighborhoods.json';
 import services from '@/content/services.json';
-import {makeMeta, faqSchema, breadcrumbSchema, JsonLd} from '@/lib/seo';
+import {makeMeta, faqSchema, breadcrumbSchema, areaServedSchema, JsonLd} from '@/lib/seo';
 
 type Props = {params: Promise<{locale: 'en' | 'fr'; slug: string}>};
 
@@ -90,7 +90,11 @@ export default async function AreaDetailPage({params}: Props) {
   return (
     <SiteShell locale={locale}>
     <div className="min-h-screen bg-white text-[#1b2434]">
-      <JsonLd data={[faqSchema(faqs), breadcrumbSchema(crumbs)]} />
+      <JsonLd data={[
+        areaServedSchema(name, slug, locale, services.map(s => isFr ? s.titleFr : s.title)),
+        faqSchema(faqs),
+        breadcrumbSchema(crumbs)
+      ]} />
 
       <section className="bg-[#1d2432] text-white">
         <div className="mx-auto max-w-[1180px] px-6 py-16">
