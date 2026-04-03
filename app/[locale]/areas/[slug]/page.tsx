@@ -52,18 +52,20 @@ export default async function AreaDetailPage({params}: Props) {
   let hubLabel: string | undefined;
   let bodyText = '';
   let descText = '';
+  let areaImage = '/media/team-cleaning.png';
 
   if (isHub(slug)) {
     const hub = hubs[slug];
     name = isFr ? hub.fr : hub.en;
   } else {
-    const n = neighborhoods.find((item) => item.slug === slug) as typeof neighborhoods[number] & {body?: string; bodyFr?: string; desc?: string; descFr?: string};
+    const n = neighborhoods.find((item) => item.slug === slug) as typeof neighborhoods[number] & {body?: string; bodyFr?: string; desc?: string; descFr?: string; image?: string};
     if (!n) notFound();
     name = n.name;
     const hub = hubs[n.hub];
     hubLabel = hub ? (isFr ? hub.fr : hub.en) : undefined;
     bodyText = (isFr ? n.bodyFr : n.body) || '';
     descText = (isFr ? n.descFr : n.desc) || '';
+    if (n.image) areaImage = n.image;
   }
 
   const description = descText || (isFr
@@ -126,7 +128,7 @@ export default async function AreaDetailPage({params}: Props) {
 
       <section className="mx-auto max-w-[1180px] px-6 py-16">
         <div className="mb-10 overflow-hidden rounded-lg">
-          <Image src="/media/team-cleaning.png" alt={isFr ? `Équipe de nettoyage professionnel à ${name}` : `Professional cleaning team in ${name}`} width={1024} height={683} className="h-auto w-full" />
+          <Image src={areaImage} alt={isFr ? `Équipe de nettoyage professionnel à ${name}` : `Professional cleaning team in ${name}`} width={1024} height={683} className="h-auto w-full" />
         </div>
         <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr]">
           <div>

@@ -54,16 +54,23 @@ export default async function BlogPage({params}: Props) {
       <section className="mx-auto max-w-[1180px] px-6 py-16">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {posts.map((post) => (
-            <Link key={post.slug} href={`/${locale}/blog/${post.slug}`} className="group rounded-[3px] border border-[#ede6d8] bg-white p-6 transition hover:-translate-y-0.5 hover:shadow-md">
-              <h2 className="text-xl font-semibold text-[#1c2333] group-hover:text-[#b38716]">
-                {isFr ? post.titleFr : post.title}
-              </h2>
-              <p className="mt-3 line-clamp-3 text-[15px] leading-7 text-[#5f6776]">
-                {isFr ? post.bodyFr.slice(0, 150) + '…' : post.body.slice(0, 150) + '…'}
-              </p>
-              <span className="mt-4 inline-block text-sm font-semibold text-[#b38716]">
-                {isFr ? 'Lire l\'article →' : 'Read more →'}
-              </span>
+            <Link key={post.slug} href={`/${locale}/blog/${post.slug}`} className="group overflow-hidden rounded-[3px] border border-[#ede6d8] bg-white transition hover:-translate-y-0.5 hover:shadow-md">
+              {post.image && (
+                <div className="overflow-hidden">
+                  <Image src={post.image} alt={isFr ? post.titleFr : post.title} width={400} height={240} className="h-48 w-full object-cover transition group-hover:scale-105" />
+                </div>
+              )}
+              <div className="p-6">
+                <h2 className="text-xl font-semibold text-[#1c2333] group-hover:text-[#b38716]">
+                  {isFr ? post.titleFr : post.title}
+                </h2>
+                <p className="mt-3 line-clamp-3 text-[15px] leading-7 text-[#5f6776]">
+                  {isFr ? post.bodyFr.slice(0, 150) + '…' : post.body.slice(0, 150) + '…'}
+                </p>
+                <span className="mt-4 inline-block text-sm font-semibold text-[#b38716]">
+                  {isFr ? 'Lire l\'article →' : 'Read more →'}
+                </span>
+              </div>
             </Link>
           ))}
         </div>

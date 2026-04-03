@@ -5,19 +5,6 @@ import {notFound} from 'next/navigation';
 import type {Metadata} from 'next';
 import posts from '@/content/blog.json';
 import services from '@/content/services.json';
-
-const blogImages: Record<string, string> = {
-  'how-much-does-cleaning-cost-in-montreal': '/media/clean-kitchen.png',
-  'deep-cleaning-vs-standard-cleaning-montreal': '/media/deep-cleaning.png',
-  'move-out-cleaning-checklist-montreal': '/media/move-in-out-cleaning.png',
-  'airbnb-turnover-cleaning-checklist-montreal': '/media/airbnb-cleaning.webp',
-  'post-renovation-cleaning-checklist-montreal': '/media/reno.png',
-  'how-often-should-you-book-recurring-cleaning': '/media/recurring-cleaning.png',
-  'what-is-included-in-a-home-cleaning-service': '/media/home-cleaning.png',
-  'how-to-prepare-for-a-cleaning-service-visit': '/media/cleaning-maid.png',
-  'office-cleaning-checklist-montreal': '/media/office-cleaning.png',
-  'window-cleaning-and-seasonal-home-maintenance': '/media/window-cleaning.png',
-};
 import {makeMeta, breadcrumbSchema, articleSchema, JsonLd} from '@/lib/seo';
 
 type Props = {params: Promise<{locale: 'en' | 'fr'; slug: string}>};
@@ -76,9 +63,9 @@ export default async function BlogPost({params}: Props) {
       </section>
 
       <article className="mx-auto max-w-[860px] px-6 py-16">
-        {blogImages[slug] && (
+        {post.image && (
           <div className="mb-10 overflow-hidden rounded-lg">
-            <Image src={blogImages[slug]} alt={title} width={860} height={480} className="h-auto w-full" />
+            <Image src={post.image} alt={title} width={860} height={480} className="h-auto w-full" />
           </div>
         )}
         <div className="text-[17px] leading-8 text-[#4c5565]">

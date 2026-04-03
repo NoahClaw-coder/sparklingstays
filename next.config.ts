@@ -5,6 +5,14 @@ const withNextIntl = createNextIntlPlugin('./lib/request.ts');
 
 const config: NextConfig = {
   reactStrictMode: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+    ],
+  },
   async redirects() {
     return [
       // ===== PRIORITY REDIRECTS (GSC data: 5+ clicks) =====
