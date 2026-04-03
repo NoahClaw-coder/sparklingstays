@@ -29,11 +29,14 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
   const {locale, slug} = await params;
   const name = getName(slug, locale);
   if (!name) return {};
+  const n = neighborhoods.find(item => item.slug === slug) as typeof neighborhoods[number] & {desc?: string; descFr?: string} | undefined;
+  const metaDesc = (locale === 'fr' ? n?.descFr : n?.desc) || `Professional residential and commercial cleaning in ${name}. Sparkling Stays serves homes, condos, offices, and Airbnbs. Book online or call 438-867-8770.`;
+  const metaDescFr = n?.descFr || `Nettoyage résidentiel et commercial professionnel à ${name}. Sparkling Stays dessert maisons, condos, bureaux et Airbnbs. Réservez en ligne ou appelez le 438-867-8770.`;
   return makeMeta({
     title: `Cleaning Services in ${name} | Sparkling Stays`,
     titleFr: `Services de nettoyage à ${name} | Sparkling Stays`,
-    desc: `Professional residential and commercial cleaning in ${name}. Sparkling Stays serves homes, condos, offices, and Airbnbs. Book online or call 438-867-8770.`,
-    descFr: `Nettoyage résidentiel et commercial professionnel à ${name}. Sparkling Stays dessert maisons, condos, bureaux et Airbnbs. Réservez en ligne ou appelez le 438-867-8770.`,
+    desc: metaDesc,
+    descFr: metaDescFr,
     path: `/areas/${slug}`,
     locale
   });
@@ -46,21 +49,25 @@ export default async function AreaDetailPage({params}: Props) {
 
   let name: string;
   let hubLabel: string | undefined;
+  let bodyText = '';
+  let descText = '';
 
   if (isHub(slug)) {
     const hub = hubs[slug];
     name = isFr ? hub.fr : hub.en;
   } else {
-    const n = neighborhoods.find((item) => item.slug === slug);
+    const n = neighborhoods.find((item) => item.slug === slug) as typeof neighborhoods[number] & {body?: string; bodyFr?: string; desc?: string; descFr?: string};
     if (!n) notFound();
     name = n.name;
     const hub = hubs[n.hub];
     hubLabel = hub ? (isFr ? hub.fr : hub.en) : undefined;
+    bodyText = (isFr ? n.bodyFr : n.body) || '';
+    descText = (isFr ? n.descFr : n.desc) || '';
   }
 
-  const description = isFr
+  const description = descText || (isFr
     ? `Sparkling Stays offre des services de nettoyage résidentiel et commercial à ${name}${hubLabel ? `, dans le secteur ${hubLabel}` : ''}.`
-    : `Sparkling Stays provides residential and commercial cleaning services in ${name}${hubLabel ? ` within the ${hubLabel} area` : ''}.`;
+    : `Sparkling Stays provides residential and commercial cleaning services in ${name}${hubLabel ? ` within the ${hubLabel} area` : ''}.`);
 
   // Nearby areas — same hub first, then others
   const currentN = neighborhoods.find(n => n.slug === slug);
@@ -112,6 +119,15 @@ export default async function AreaDetailPage({params}: Props) {
       <section className="mx-auto max-w-[1180px] px-6 py-16">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr]">
           <div>
+            {/* Area description */}
+            {bodyText && (
+              <div className="mb-10">
+                {bodyText.split('\n\n').map((para, i) => (
+                  <p key={i} className="mt-4 text-[16px] leading-8 text-[#5f6776] first:mt-0">{para}</p>
+                ))}
+              </div>
+            )}
+
             {/* Service cross-links */}
             <h2 className="text-3xl font-semibold tracking-tight text-[#1c2333]">
               {isFr ? `Services de nettoyage à ${name}` : `Cleaning services available in ${name}`}

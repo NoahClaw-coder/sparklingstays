@@ -70,7 +70,11 @@ export default async function ServiceDetailPage({params}: Props) {
         <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr]">
           <div>
             <p className="text-lg leading-8 text-[#5f6776]">{desc}</p>
-            <div className="mt-8 text-[17px] leading-8 text-[#4c5565]">{body}</div>
+            <div className="mt-8 space-y-4">
+              {body.split('\n\n').map((para, i) => (
+                <p key={i} className="text-[16px] leading-8 text-[#4c5565]">{para}</p>
+              ))}
+            </div>
 
             {/* Internal links to area pages */}
             <h2 className="mt-12 text-2xl font-semibold text-[#1c2333]">
