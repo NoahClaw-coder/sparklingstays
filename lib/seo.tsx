@@ -24,7 +24,14 @@ export function makeMeta({
       url: canonical,
       siteName: 'Sparkling Stays',
       locale: isFr ? 'fr_CA' : 'en_CA',
-      type: 'website'
+      type: 'website',
+      images: [{url: `${BASE}/og-image.jpg`, width: 666, height: 500, alt: 'Sparkling Stays — Montreal Cleaning Services'}]
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: isFr ? titleFr : title,
+      description: isFr ? descFr : desc,
+      images: [`${BASE}/og-image.jpg`]
     }
   };
 }

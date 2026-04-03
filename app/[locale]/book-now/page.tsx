@@ -54,6 +54,8 @@ export default async function BookNowPage({params}: Props) {
           scrolling="no"
           title={isFr ? 'Formulaire de réservation Sparkling Stays' : 'Sparkling Stays Booking Form'}
         />
+        {/* BookingKoala auto-resize script */}
+        <script src="https://sparklingstays.bookingkoala.com/resources/embed.js" async />
       </section>
 
       <section className="bg-[#fbf5e8] py-12">
