@@ -1,3 +1,4 @@
+import {SiteShell} from "@/components/SiteShell";
 import Link from 'next/link';
 import Image from 'next/image';
 import type {Metadata} from 'next';
@@ -24,6 +25,7 @@ export default async function ServicesPage({params}: Props) {
   const BASE = 'https://sparklingstays.com';
 
   return (
+    <SiteShell locale={locale}>
     <div className="min-h-screen bg-white text-[#1b2434]">
       <JsonLd data={breadcrumbSchema([
         {name: isFr ? 'Accueil' : 'Home', url: `${BASE}/${locale}`},
@@ -69,5 +71,6 @@ export default async function ServicesPage({params}: Props) {
         </div>
       </section>
     </div>
+    </SiteShell>
   );
 }

@@ -1,3 +1,4 @@
+import {SiteShell} from "@/components/SiteShell";
 import Link from 'next/link';
 import {notFound} from 'next/navigation';
 import type {Metadata} from 'next';
@@ -80,6 +81,7 @@ export default async function AreaDetailPage({params}: Props) {
   ];
 
   return (
+    <SiteShell locale={locale}>
     <div className="min-h-screen bg-white text-[#1b2434]">
       <JsonLd data={[faqSchema(faqs), breadcrumbSchema(crumbs)]} />
 
@@ -187,5 +189,6 @@ export default async function AreaDetailPage({params}: Props) {
         </div>
       </section>
     </div>
+    </SiteShell>
   );
 }

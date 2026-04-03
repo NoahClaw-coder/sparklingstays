@@ -1,3 +1,4 @@
+import {SiteShell} from "@/components/SiteShell";
 import Link from 'next/link';
 import type {Metadata} from 'next';
 import neighborhoods from '@/content/neighborhoods.json';
@@ -36,6 +37,7 @@ export default async function AreasPage({params}: Props) {
   }, {});
 
   return (
+    <SiteShell locale={locale}>
     <div className="min-h-screen bg-white text-[#1b2434]">
       <JsonLd data={breadcrumbSchema([
         {name: isFr ? 'Accueil' : 'Home', url: `${BASE}/${locale}`},
@@ -97,5 +99,6 @@ export default async function AreasPage({params}: Props) {
         </div>
       </section>
     </div>
+    </SiteShell>
   );
 }

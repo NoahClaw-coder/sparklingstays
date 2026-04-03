@@ -1,9 +1,11 @@
 import Link from 'next/link';
+import {SiteShell} from '@/components/SiteShell';
 
 export default async function ThankYouPage({params}: {params: Promise<{locale: 'en' | 'fr'}>}) {
   const {locale} = await params;
   const isFr = locale === 'fr';
   return (
+    <SiteShell locale={locale}>
     <div className="flex min-h-[60vh] items-center justify-center px-6 text-center text-[#1b2434]">
       <div>
         <h1 className="text-4xl font-semibold">{isFr ? 'Merci!' : 'Thank You!'}</h1>
@@ -13,5 +15,6 @@ export default async function ThankYouPage({params}: {params: Promise<{locale: '
         </Link>
       </div>
     </div>
+    </SiteShell>
   );
 }

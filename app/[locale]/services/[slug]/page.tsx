@@ -1,3 +1,4 @@
+import {SiteShell} from "@/components/SiteShell";
 import Image from 'next/image';
 import Link from 'next/link';
 import {notFound} from 'next/navigation';
@@ -43,6 +44,7 @@ export default async function ServiceDetailPage({params}: Props) {
   ];
 
   return (
+    <SiteShell locale={locale}>
     <div className="min-h-screen bg-white text-[#1b2434]">
       <JsonLd data={[
         serviceSchema(title, desc, slug, locale),
@@ -134,5 +136,6 @@ export default async function ServiceDetailPage({params}: Props) {
         </div>
       </section>
     </div>
+    </SiteShell>
   );
 }
