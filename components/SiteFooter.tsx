@@ -11,7 +11,7 @@ function SocialIcon({kind}: {kind: 'instagram' | 'facebook' | 'yelp' | 'pinteres
   return <svg viewBox="0 0 24 24" aria-hidden="true" className={cls} fill="currentColor"><path d="M7.8 2h8.4C19 2 22 5 22 7.8v8.4c0 2.9-3 5.8-5.8 5.8H7.8C5 22 2 19 2 16.2V7.8C2 5 5 2 7.8 2Zm-.2 2.3c-1.8 0-3.3 1.5-3.3 3.3v8.8c0 1.8 1.5 3.3 3.3 3.3h8.8c1.8 0 3.3-1.5 3.3-3.3V7.6c0-1.8-1.5-3.3-3.3-3.3H7.6Zm9.5 1.8a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10.1A5 5 0 0 1 12 7Zm0 2.2a2.8 2.8 0 1 0 0 5.7 2.8 2.8 0 0 0 0-5.7Z" /></svg>;
 }
 
-const footerAreas = neighborhoods.slice(0, 9).map(n => n.name);
+const footerAreas = neighborhoods.slice(0, 9);
 
 export function SiteFooter({locale}: {locale: string}) {
   const isFr = locale === 'fr';
@@ -44,8 +44,8 @@ export function SiteFooter({locale}: {locale: string}) {
           <h3 className="text-[22px] font-semibold tracking-[-0.03em]">{isFr ? 'Secteurs' : 'Service Areas'}</h3>
           <ul className="mt-5 space-y-3 text-[15px] text-white/70">
             {footerAreas.map((area) => (
-              <li key={area}>
-                <Link href={`/${locale}/areas`} className="transition hover:text-[#f2cb58]">{area}</Link>
+              <li key={area.slug}>
+                <Link href={`/${locale}/areas/${area.slug}`} className="transition hover:text-[#f2cb58]">{area.name}</Link>
               </li>
             ))}
           </ul>

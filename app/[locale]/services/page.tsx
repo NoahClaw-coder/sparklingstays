@@ -32,8 +32,11 @@ export default async function ServicesPage({params}: Props) {
         {name: 'Services', url: `${BASE}/${locale}/services`}
       ])} />
 
-      <section className="bg-[#1d2432] py-16 text-white">
-        <div className="mx-auto max-w-[1180px] px-6">
+      <section className="relative bg-[#1d2432] py-16 text-white">
+        <div className="absolute inset-0 overflow-hidden">
+          <Image src="/media/commercial-cleaning.png" alt="Professional cleaning services" fill className="object-cover opacity-15" sizes="100vw" />
+        </div>
+        <div className="relative mx-auto max-w-[1180px] px-6">
           <nav className="mb-4 text-sm text-white/70">
             <Link href={`/${locale}`} className="hover:text-white">{isFr ? 'Accueil' : 'Home'}</Link>
             <span className="mx-2">/</span>

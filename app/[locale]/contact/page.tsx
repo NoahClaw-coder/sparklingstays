@@ -1,5 +1,6 @@
 import {SiteShell} from "@/components/SiteShell";
 import Link from 'next/link';
+import Image from 'next/image';
 import type {Metadata} from 'next';
 import {makeMeta, breadcrumbSchema, JsonLd} from '@/lib/seo';
 
@@ -30,8 +31,11 @@ export default async function ContactPage({params}: Props) {
         {name: 'Contact', url: `${BASE}/${locale}/contact`}
       ])} />
 
-      <section className="bg-[#1d2432] py-16 text-white">
-        <div className="mx-auto max-w-[1180px] px-6">
+      <section className="relative bg-[#1d2432] py-16 text-white">
+        <div className="absolute inset-0 overflow-hidden">
+          <Image src="/media/cleaning-maid.png" alt="Sparkling Stays cleaning team" fill className="object-cover opacity-15" sizes="100vw" />
+        </div>
+        <div className="relative mx-auto max-w-[1180px] px-6">
           <nav className="mb-4 text-sm text-white/60">
             <Link href={`/${locale}`} className="hover:text-white">{isFr ? 'Accueil' : 'Home'}</Link>
             <span className="mx-2">/</span>

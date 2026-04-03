@@ -1,5 +1,6 @@
 import {SiteShell} from "@/components/SiteShell";
 import Link from 'next/link';
+import Image from 'next/image';
 import type {Metadata} from 'next';
 import {makeMeta, breadcrumbSchema, JsonLd} from '@/lib/seo';
 
@@ -86,8 +87,11 @@ export default async function PricingPage({params}: Props) {
         {name: isFr ? 'Tarifs' : 'Pricing', url: `${BASE}/${locale}/pricing`}
       ])} />
 
-      <section className="bg-[#1d2432] py-16 text-white">
-        <div className="mx-auto max-w-[1180px] px-6">
+      <section className="relative bg-[#1d2432] py-16 text-white">
+        <div className="absolute inset-0 overflow-hidden">
+          <Image src="/media/large-windows.png" alt="Clean home interior" fill className="object-cover opacity-15" sizes="100vw" />
+        </div>
+        <div className="relative mx-auto max-w-[1180px] px-6">
           <nav className="mb-4 text-sm text-white/60">
             <Link href={`/${locale}`} className="hover:text-white">{isFr ? 'Accueil' : 'Home'}</Link>
             <span className="mx-2">/</span>

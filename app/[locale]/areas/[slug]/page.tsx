@@ -1,5 +1,6 @@
 import {SiteShell} from "@/components/SiteShell";
 import Link from 'next/link';
+import Image from 'next/image';
 import {notFound} from 'next/navigation';
 import type {Metadata} from 'next';
 import neighborhoods from '@/content/neighborhoods.json';
@@ -96,8 +97,11 @@ export default async function AreaDetailPage({params}: Props) {
         breadcrumbSchema(crumbs)
       ]} />
 
-      <section className="bg-[#1d2432] text-white">
-        <div className="mx-auto max-w-[1180px] px-6 py-16">
+      <section className="relative bg-[#1d2432] text-white">
+        <div className="absolute inset-0 overflow-hidden">
+          <Image src="/media/clean-kitchen.png" alt={`Cleaning services in ${name}`} fill className="object-cover opacity-15" sizes="100vw" priority />
+        </div>
+        <div className="relative mx-auto max-w-[1180px] px-6 py-16">
           <nav className="mb-4 text-sm text-white/70">
             <Link href={`/${locale}`} className="hover:text-white">{isFr ? 'Accueil' : 'Home'}</Link>
             <span className="mx-2">/</span>
@@ -121,6 +125,9 @@ export default async function AreaDetailPage({params}: Props) {
       </section>
 
       <section className="mx-auto max-w-[1180px] px-6 py-16">
+        <div className="mb-10 overflow-hidden rounded-lg">
+          <Image src="/media/team-cleaning.png" alt={isFr ? `Équipe de nettoyage professionnel à ${name}` : `Professional cleaning team in ${name}`} width={1024} height={683} className="h-auto w-full" />
+        </div>
         <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr]">
           <div>
             {/* Area description */}

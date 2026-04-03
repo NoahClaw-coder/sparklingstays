@@ -1,5 +1,6 @@
 import {SiteShell} from "@/components/SiteShell";
 import Link from 'next/link';
+import Image from 'next/image';
 import type {Metadata} from 'next';
 import neighborhoods from '@/content/neighborhoods.json';
 import {makeMeta, breadcrumbSchema, JsonLd} from '@/lib/seo';
@@ -44,8 +45,11 @@ export default async function AreasPage({params}: Props) {
         {name: isFr ? 'Secteurs' : 'Areas', url: `${BASE}/${locale}/areas`}
       ])} />
 
-      <section className="bg-[#1d2432] py-16 text-white">
-        <div className="mx-auto max-w-[1180px] px-6">
+      <section className="relative bg-[#1d2432] py-16 text-white">
+        <div className="absolute inset-0 overflow-hidden">
+          <Image src="/media/team-cleaning.png" alt="Cleaning service areas in Montreal" fill className="object-cover opacity-15" sizes="100vw" />
+        </div>
+        <div className="relative mx-auto max-w-[1180px] px-6">
           <nav className="mb-4 text-sm text-white/70">
             <Link href={`/${locale}`} className="hover:text-white">{isFr ? 'Accueil' : 'Home'}</Link>
             <span className="mx-2">/</span>
