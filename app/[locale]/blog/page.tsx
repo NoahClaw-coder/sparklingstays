@@ -4,6 +4,7 @@ import Image from 'next/image';
 import type {Metadata} from 'next';
 import posts from '@/content/blog.json';
 import {makeMeta, breadcrumbSchema, JsonLd} from '@/lib/seo';
+import {stripMarkdown} from '@/components/MarkdownContent';
 
 type Props = {params: Promise<{locale: 'en' | 'fr'}>};
 
@@ -59,7 +60,7 @@ export default async function BlogPage({params}: Props) {
                 {isFr ? post.titleFr : post.title}
               </h2>
               <p className="mt-3 line-clamp-3 text-[15px] leading-7 text-[#5f6776]">
-                {isFr ? post.bodyFr.slice(0, 150) + '…' : post.body.slice(0, 150) + '…'}
+                {isFr ? stripMarkdown(post.bodyFr).slice(0, 150) + '…' : stripMarkdown(post.body).slice(0, 150) + '…'}
               </p>
               <span className="mt-4 inline-block text-sm font-semibold text-[#b38716]">
                 {isFr ? 'Lire l\'article →' : 'Read more →'}

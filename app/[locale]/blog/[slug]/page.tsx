@@ -19,6 +19,7 @@ const blogImages: Record<string, string> = {
   'window-cleaning-and-seasonal-home-maintenance': '/media/window-cleaning.png',
 };
 import {makeMeta, breadcrumbSchema, articleSchema, JsonLd} from '@/lib/seo';
+import {MarkdownContent} from '@/components/MarkdownContent';
 
 type Props = {params: Promise<{locale: 'en' | 'fr'; slug: string}>};
 
@@ -81,11 +82,7 @@ export default async function BlogPost({params}: Props) {
             <Image src={blogImages[slug]} alt={title} width={860} height={480} className="h-auto w-full" />
           </div>
         )}
-        <div className="text-[17px] leading-8 text-[#4c5565]">
-          {body.split('\n\n').map((para, i) => (
-            <p key={i} className="mt-4 first:mt-0">{para}</p>
-          ))}
-        </div>
+        <MarkdownContent content={body} className="text-[17px]" />
 
         {/* Service cross-links */}
         <div className="mt-12 rounded-[3px] border border-[#ede6d8] bg-[#fbf5e8] p-6">

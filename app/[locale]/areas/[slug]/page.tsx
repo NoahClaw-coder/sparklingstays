@@ -6,6 +6,7 @@ import type {Metadata} from 'next';
 import neighborhoods from '@/content/neighborhoods.json';
 import services from '@/content/services.json';
 import {makeMeta, faqSchema, breadcrumbSchema, areaServedSchema, JsonLd} from '@/lib/seo';
+import {MarkdownContent} from '@/components/MarkdownContent';
 
 type Props = {params: Promise<{locale: 'en' | 'fr'; slug: string}>};
 
@@ -132,11 +133,7 @@ export default async function AreaDetailPage({params}: Props) {
           <div>
             {/* Area description */}
             {bodyText && (
-              <div className="mb-10">
-                {bodyText.split('\n\n').map((para, i) => (
-                  <p key={i} className="mt-4 text-[16px] leading-8 text-[#5f6776] first:mt-0">{para}</p>
-                ))}
-              </div>
+              <MarkdownContent content={bodyText} className="mb-10" />
             )}
 
             {/* Service cross-links */}

@@ -6,6 +6,7 @@ import type {Metadata} from 'next';
 import services from '@/content/services.json';
 import neighborhoods from '@/content/neighborhoods.json';
 import {makeMeta, serviceSchema, breadcrumbSchema, JsonLd} from '@/lib/seo';
+import {MarkdownContent} from '@/components/MarkdownContent';
 
 type Props = {params: Promise<{locale: 'en' | 'fr'; slug: string}>};
 
@@ -70,11 +71,7 @@ export default async function ServiceDetailPage({params}: Props) {
         <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr]">
           <div>
             <p className="text-lg leading-8 text-[#5f6776]">{desc}</p>
-            <div className="mt-8 space-y-4">
-              {body.split('\n\n').map((para, i) => (
-                <p key={i} className="text-[16px] leading-8 text-[#4c5565]">{para}</p>
-              ))}
-            </div>
+            <MarkdownContent content={body} className="mt-8" />
 
             {/* Internal links to area pages */}
             <h2 className="mt-12 text-2xl font-semibold text-[#1c2333]">
