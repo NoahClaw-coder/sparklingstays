@@ -17,14 +17,30 @@ export function SiteFooter({locale}: {locale: string}) {
   const isFr = locale === 'fr';
   return (
     <footer className="bg-[#1d2432] text-white">
-      <div className="mx-auto grid max-w-[1180px] gap-10 px-4 py-16 md:px-6 lg:grid-cols-[1.1fr_0.85fr_0.85fr_1fr]">
+      <div className="mx-auto grid max-w-[1180px] gap-10 px-4 py-16 md:px-6 lg:grid-cols-[1.4fr_0.85fr_0.85fr_1fr]">
         <div>
-          <Image src="/media/logo.png" alt="Sparkling Stays" width={180} height={58} className="h-11 w-auto brightness-[1.2] saturate-0 invert" />
-          <p className="mt-6 text-[15px] leading-7 text-white/70">
-            {isFr
-              ? 'Services de nettoyage résidentiel et commercial à Montréal, Laval, West Island et Rive-Sud.'
-              : 'Residential and commercial cleaning services across Montreal, Laval, West Island, and South Shore.'}
-          </p>
+          <h3 className="text-[22px] font-semibold tracking-[-0.03em]">{isFr ? 'Nous trouver' : 'Find Us'}</h3>
+          <div className="mt-5 overflow-hidden rounded-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d359482.6604771872!2d-73.667792!3d45.906748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84f8ecad890955f%3A0x62f40adb38d71543!2sSparkling%20Stays%20-%20Montreal%20Cleaning%20Service!5e0!3m2!1sen!2sca!4v1"
+              width="100%"
+              height="300"
+              style={{border: 0}}
+              allowFullScreen={false}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Sparkling Stays Montreal Location"
+              className="w-full"
+            />
+          </div>
+          <a
+            href="https://www.google.com/maps/place/Sparkling+Stays+-+Montreal+Cleaning+Service/@45.906748,-73.667792,10z/data=!4m6!3m5!1s0x84f8ecad890955f:0x62f40adb38d71543!8m2!3d45.5591827!4d-73.7118733!16s%2Fg%2F11sjkdw5_m"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 inline-block text-[14px] text-white/70 transition hover:text-[#f2cb58]"
+          >
+            {isFr ? 'Ouvrir dans Maps →' : 'Open in Maps →'}
+          </a>
         </div>
 
         <div>
@@ -52,7 +68,13 @@ export function SiteFooter({locale}: {locale: string}) {
         </div>
 
         <div>
-          <h3 className="text-[22px] font-semibold tracking-[-0.03em]">{isFr ? 'Contactez-nous' : 'Contact Us'}</h3>
+          <Image src="/media/logo.png" alt="Sparkling Stays" width={180} height={58} className="h-11 w-auto brightness-[1.2] saturate-0 invert" />
+          <p className="mt-4 text-[14px] leading-6 text-white/70">
+            {isFr
+              ? 'Services de nettoyage résidentiel et commercial à Montréal, Laval, West Island et Rive-Sud.'
+              : 'Residential and commercial cleaning services across Montreal, Laval, West Island, and South Shore.'}
+          </p>
+          <h3 className="mt-6 text-[22px] font-semibold tracking-[-0.03em]">{isFr ? 'Contactez-nous' : 'Contact Us'}</h3>
           <ul className="mt-5 space-y-4 text-[15px] text-white/70">
             <li><a href="tel:438-867-8770" className="transition hover:text-[#f2cb58]">{isFr ? 'Appel' : 'Call'}: 438-867-8770</a></li>
             <li><a href="mailto:info@sparklingstays.com" className="transition hover:text-[#f2cb58]">Email: info@sparklingstays.com</a></li>
