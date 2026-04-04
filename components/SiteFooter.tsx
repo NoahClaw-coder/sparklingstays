@@ -93,10 +93,7 @@ export function SiteFooter({locale}: {locale: string}) {
             <Link href={`/${locale}/book-now`} className="block hover:text-[#f2cb58]">{isFr ? 'Réserver' : 'Book Now'}</Link>
           </div>
 
-          <div className="mt-7 text-[15px] leading-7 text-white/70">
-            <p>5850 Upper Lachine Rd</p>
-            <p>Montreal, QC H4A 2B9</p>
-          </div>
+
         </div>
       </div>
 
