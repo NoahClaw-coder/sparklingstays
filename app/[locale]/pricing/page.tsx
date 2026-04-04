@@ -125,7 +125,7 @@ export default async function PricingPage({params}: Props) {
                   </li>
                 ))}
               </ul>
-              <Link href={`/${locale}/book-now`} className={`mt-8 block w-full rounded-sm py-4 text-center text-[12px] font-bold uppercase tracking-[0.22em] ${tier.popular ? 'bg-[#cfa21a] text-[#152033]' : 'border border-[#ddd2be] text-[#1b2434]'}`}>
+              <Link href={`/${locale}/book-now`} className="mt-8 block w-full rounded-sm bg-[#FEE569] py-4 text-center text-[12px] font-bold uppercase tracking-[0.22em] text-white">
                 {isFr ? 'OBTENIR UN DEVIS' : 'GET A QUOTE'}
               </Link>
             </div>
@@ -217,7 +217,7 @@ export default async function PricingPage({params}: Props) {
           <h2 className="text-3xl font-semibold">{isFr ? 'Obtenez votre devis instantané' : 'Get your instant quote'}</h2>
           <p className="mt-4 text-lg text-white/70">{isFr ? 'Réservez en ligne et obtenez votre prix en quelques clics. Sans engagement.' : 'Book online and get your price in a few clicks. No obligation.'}</p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link href={`/${locale}/book-now`} className="rounded-sm bg-[#cfa21a] px-8 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-[#152033]">
+            <Link href={`/${locale}/book-now`} className="rounded-sm bg-[#FEE569] px-8 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-white">
               {isFr ? 'RÉSERVER MAINTENANT' : 'BOOK NOW'}
             </Link>
             <a href="tel:438-867-8770" className="rounded-sm border border-white/40 bg-white/10 px-8 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-white">

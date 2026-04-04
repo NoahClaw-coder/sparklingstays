@@ -61,12 +61,12 @@ export function SiteHeader({locale}: {locale: string}) {
             <Link href={`/${locale}/blog`} className="transition hover:text-[#b38716]">Blog</Link>
             <Link href={`/${locale}/faq`} className="transition hover:text-[#b38716]">FAQ</Link>
             <Link href={`/${locale}/contact`} className="transition hover:text-[#b38716]">Contact</Link>
-            <Link href={`/${locale}/book-now`} className="rounded-sm bg-[#cfa21a] px-4 py-3 text-[12px] font-bold tracking-[0.2em] text-[#152033] shadow-[0_10px_24px_rgba(207,162,26,0.28)] transition hover:bg-[#b99016]">
+            <Link href={`/${locale}/book-now`} className="rounded-sm bg-[#FEE569] px-4 py-3 text-[12px] font-bold tracking-[0.2em] text-white shadow-[0_10px_24px_rgba(207,162,26,0.28)] transition hover:bg-[#fdd83a]">
               {isFr ? 'RÉSERVER' : 'BOOK NOW'}
             </Link>
           </nav>
 
-          <Link href={`/${locale}/book-now`} className="rounded-sm bg-[#cfa21a] px-4 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-[#152033] lg:hidden">
+          <Link href={`/${locale}/book-now`} className="rounded-sm bg-[#FEE569] px-4 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-white lg:hidden">
             {isFr ? 'RÉSERVER' : 'BOOK NOW'}
           </Link>
         </div>

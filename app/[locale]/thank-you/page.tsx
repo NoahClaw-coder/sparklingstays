@@ -10,7 +10,7 @@ export default async function ThankYouPage({params}: {params: Promise<{locale: '
       <div>
         <h1 className="text-4xl font-semibold">{isFr ? 'Merci!' : 'Thank You!'}</h1>
         <p className="mt-4 text-lg text-[#5f6776]">{isFr ? 'Votre demande a été envoyée. Nous vous contacterons sous peu.' : 'Your request has been submitted. We will be in touch shortly.'}</p>
-        <Link href={`/${locale}`} className="mt-8 inline-flex rounded-sm bg-[#cfa21a] px-7 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-[#152033]">
+        <Link href={`/${locale}`} className="mt-8 inline-flex rounded-sm bg-[#FEE569] px-7 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-white">
           {isFr ? 'RETOUR À L\'ACCUEIL' : 'BACK TO HOME'}
         </Link>
       </div>

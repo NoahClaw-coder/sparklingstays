@@ -115,7 +115,7 @@ export default async function AreaDetailPage({params}: Props) {
           </h1>
           <p className="mt-5 max-w-3xl text-lg leading-8 text-white/85">{description}</p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href={`/${locale}/book-now`} className="rounded-sm bg-[#cfa21a] px-7 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-[#152033]">
+            <Link href={`/${locale}/book-now`} className="rounded-sm bg-[#FEE569] px-7 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-white">
               {isFr ? 'RÉSERVER' : 'BOOK NOW'}
             </Link>
             <a href="tel:438-867-8770" className="rounded-sm border border-white/40 bg-white/10 px-7 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-white">
@@ -205,7 +205,7 @@ export default async function AreaDetailPage({params}: Props) {
             <div className="rounded-[3px] bg-[#1d2432] p-6 text-white">
               <h3 className="text-lg font-semibold">{isFr ? 'Obtenez une soumission' : 'Get a free quote'}</h3>
               <p className="mt-2 text-sm text-white/70">{isFr ? 'Réponse rapide, sans engagement.' : 'Fast response, no obligation.'}</p>
-              <Link href={`/${locale}/book-now`} className="mt-4 inline-flex rounded-sm bg-[#cfa21a] px-6 py-3 text-[12px] font-bold uppercase tracking-[0.22em] text-[#152033]">
+              <Link href={`/${locale}/book-now`} className="mt-4 inline-flex rounded-sm bg-[#FEE569] px-6 py-3 text-[12px] font-bold uppercase tracking-[0.22em] text-white">
                 {isFr ? 'RÉSERVER' : 'BOOK NOW'}
               </Link>
             </div>

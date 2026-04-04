@@ -125,7 +125,7 @@ export default async function ContactPage({params}: Props) {
                 <label className="block text-sm font-medium text-[#1c2333]">Message</label>
                 <textarea name="message" rows={4} required className="mt-1 w-full rounded-[3px] border border-[#ddd2be] px-4 py-3 text-[15px] text-[#1b2434] outline-none focus:border-[#cfa21a]" placeholder={isFr ? 'Décrivez ce dont vous avez besoin…' : 'Tell us what you need…'} />
               </div>
-              <button type="submit" className="w-full rounded-sm bg-[#cfa21a] px-7 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-[#152033]">
+              <button type="submit" className="w-full rounded-sm bg-[#FEE569] px-7 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-white">
                 {isFr ? 'ENVOYER' : 'SEND MESSAGE'}
               </button>
             </form>

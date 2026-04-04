@@ -89,7 +89,7 @@ export default async function ServiceDetailPage({params}: Props) {
             </div>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link href={`/${locale}/book-now`} className="rounded-sm bg-[#cfa21a] px-7 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-[#152033]">
+              <Link href={`/${locale}/book-now`} className="rounded-sm bg-[#FEE569] px-7 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-white">
                 {isFr ? 'RÉSERVER' : 'BOOK NOW'}
               </Link>
               <a href="tel:438-867-8770" className="rounded-sm border border-[#ddd2be] bg-white px-7 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-[#1b2434]">

@@ -267,7 +267,7 @@ export function HomepageExact({locale, nav, hero}: Props) {
             <a href="#contact" className="transition hover:text-[#b38716]">{nav.contact}</a>
             <Link
               href={`/${locale}/book-now`}
-              className="rounded-sm bg-[#cfa21a] px-4 py-3 text-[12px] font-bold tracking-[0.2em] text-[#152033] shadow-[0_10px_24px_rgba(207,162,26,0.28)] transition hover:bg-[#b99016]"
+              className="rounded-sm bg-[#FEE569] px-4 py-3 text-[12px] font-bold tracking-[0.2em] text-white shadow-[0_10px_24px_rgba(207,162,26,0.28)] transition hover:bg-[#fdd83a]"
             >
               {nav.bookNow}
             </Link>
@@ -275,7 +275,7 @@ export function HomepageExact({locale, nav, hero}: Props) {
 
           <Link
             href={`/${locale}/book-now`}
-            className="rounded-sm bg-[#cfa21a] px-4 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-[#152033] lg:hidden"
+            className="rounded-sm bg-[#FEE569] px-4 py-3 text-[12px] font-bold uppercase tracking-[0.18em] text-white lg:hidden"
           >
             {nav.bookNow}
           </Link>
@@ -309,13 +309,13 @@ export function HomepageExact({locale, nav, hero}: Props) {
               <div className="mt-9 flex flex-wrap gap-4">
                 <Link
                   href={`/${locale}/book-now`}
-                  className="rounded-sm bg-[#cfa21a] px-7 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-[#152033] shadow-[0_18px_35px_rgba(207,162,26,0.32)] transition hover:bg-[#b99016]"
+                  className="rounded-xl bg-[#FEE569] px-7 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-white shadow-[0_18px_35px_rgba(207,162,26,0.32)] transition hover:bg-[#fdd83a]"
                 >
                   {hero.book}
                 </Link>
                 <a
                   href="tel:438-867-8770"
-                  className="rounded-sm border border-white/55 bg-white/10 px-7 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-white backdrop-blur-sm transition hover:bg-white/18"
+                  className="rounded-xl border border-white/55 bg-white/10 px-7 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-white backdrop-blur-sm transition hover:bg-white/18"
                 >
                   {hero.call}
                 </a>
@@ -387,7 +387,7 @@ export function HomepageExact({locale, nav, hero}: Props) {
             <div className="mt-10 text-center">
               <Link
                 href={`/${locale}/book-now`}
-                className="inline-flex rounded-sm bg-[#cfa21a] px-7 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-[#152033] shadow-[0_18px_35px_rgba(207,162,26,0.24)] transition hover:bg-[#b99016]"
+                className="inline-flex rounded-xl bg-[#FEE569] px-7 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-white shadow-[0_18px_35px_rgba(207,162,26,0.24)] transition hover:bg-[#fdd83a]"
               >
                 BOOK NOW!
               </Link>
@@ -507,7 +507,7 @@ export function HomepageExact({locale, nav, hero}: Props) {
               <div className="mt-5">
                 <Link
                   href={`/${locale}/pricing`}
-                  className="inline-flex rounded-sm bg-[#cfa21a] px-7 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-[#152033] transition hover:bg-[#b99016]"
+                  className="inline-flex rounded-xl bg-[#FEE569] px-7 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-white transition hover:bg-[#fdd83a]"
                 >
                   VIEW PRICING
                 </Link>

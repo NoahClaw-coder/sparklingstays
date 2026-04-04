@@ -97,7 +97,7 @@ export default async function AreasPage({params}: Props) {
         })}
 
         <div className="mt-16 text-center">
-          <Link href={`/${locale}/book-now`} className="rounded-sm bg-[#cfa21a] px-8 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-[#152033]">
+          <Link href={`/${locale}/book-now`} className="rounded-sm bg-[#FEE569] px-8 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-white">
             {isFr ? 'RÉSERVER MAINTENANT' : 'BOOK NOW'}
           </Link>
         </div>

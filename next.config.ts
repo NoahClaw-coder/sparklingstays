@@ -73,6 +73,11 @@ const config: NextConfig = {
       { source: '/blog', destination: '/en/blog', permanent: true },
       { source: '/blog/', destination: '/en/blog', permanent: true },
 
+      // ===== WILDCARD SLUG REDIRECTS =====
+      { source: '/blog/:slug*', destination: '/en/blog/:slug*', permanent: true },
+      { source: '/services/:slug*', destination: '/en/services/:slug*', permanent: true },
+      { source: '/areas/:slug*', destination: '/en/areas/:slug*', permanent: true },
+
     ];
   },
 };

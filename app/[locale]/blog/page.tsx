@@ -74,7 +74,7 @@ export default async function BlogPage({params}: Props) {
         <div className="mx-auto max-w-[760px] px-6">
           <h2 className="text-2xl font-semibold text-[#1c2333]">{isFr ? 'Prêt à réserver?' : 'Ready to book?'}</h2>
           <p className="mt-3 text-[#5f6776]">{isFr ? 'Obtenez un devis gratuit en quelques minutes.' : 'Get a free quote in minutes.'}</p>
-          <Link href={`/${locale}/book-now`} className="mt-6 inline-flex rounded-sm bg-[#cfa21a] px-8 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-[#152033]">
+          <Link href={`/${locale}/book-now`} className="mt-6 inline-flex rounded-sm bg-[#FEE569] px-8 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-white">
             {isFr ? 'RÉSERVER' : 'BOOK NOW'}
           </Link>
         </div>

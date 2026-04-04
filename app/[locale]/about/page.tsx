@@ -83,7 +83,7 @@ export default async function AboutPage({params}: Props) {
                 : 'Whether you need weekly upkeep, a one-time deep clean, or turnover cleaning between guests, we adapt to your situation.'}
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Link href={`/${locale}/book-now`} className="rounded-sm bg-[#cfa21a] px-7 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-[#152033]">
+              <Link href={`/${locale}/book-now`} className="rounded-sm bg-[#FEE569] px-7 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-white">
                 {isFr ? 'RÉSERVER' : 'BOOK NOW'}
               </Link>
               <Link href={`/${locale}/services`} className="rounded-sm border border-[#ddd2be] px-7 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-[#1b2434]">
@@ -139,7 +139,7 @@ export default async function AboutPage({params}: Props) {
           <p className="mt-4 text-lg text-white/70">
             {isFr ? 'Obtenez une soumission gratuite en quelques minutes.' : 'Get a free quote in minutes.'}
           </p>
-          <Link href={`/${locale}/book-now`} className="mt-8 inline-flex rounded-sm bg-[#cfa21a] px-8 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-[#152033]">
+          <Link href={`/${locale}/book-now`} className="mt-8 inline-flex rounded-sm bg-[#FEE569] px-8 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-white">
             {isFr ? 'RÉSERVER MAINTENANT' : 'BOOK NOW'}
           </Link>
         </div>

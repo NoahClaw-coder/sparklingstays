@@ -91,7 +91,7 @@ export default async function FAQPage({params}: Props) {
             <Link href={`/${locale}/contact`} className="rounded-sm border border-white/40 bg-white/10 px-7 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-white">
               {isFr ? 'NOUS CONTACTER' : 'CONTACT US'}
             </Link>
-            <Link href={`/${locale}/book-now`} className="rounded-sm bg-[#cfa21a] px-7 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-[#152033]">
+            <Link href={`/${locale}/book-now`} className="rounded-sm bg-[#FEE569] px-7 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-white">
               {isFr ? 'RÉSERVER' : 'BOOK NOW'}
             </Link>
           </div>
